@@ -16,7 +16,10 @@ import threading
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "core"))
 
-import headsup as _hu  # noqa: E402
+# Import the TUI module unambiguously as `core.headsup` — importing it as plain
+# `headsup` collides with this launcher module when run via the installed
+# console script (both would be named `headsup`).
+from core import headsup as _hu  # noqa: E402
 
 
 def main() -> None:
