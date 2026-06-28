@@ -8,6 +8,7 @@ Usage:
   headsup --once           Render one snapshot and exit (CI / smoke test)
   headsup timeline [N]     Print the recent memory timeline and exit
   headsup intel            Ingest + print latest threat intelligence and exit
+  headsup reset [-y]       Clear local HydraDB memory (asks to confirm; -y skips)
 """
 import os
 import sys
@@ -20,6 +21,35 @@ import headsup as _hu  # noqa: E402
 
 def main() -> None:
     args = sys.argv[1:]
+
+    if args and args[0] == "reset":
+        from hydradb import get_db
+        db = get_db()
+        force = "-y" in args or "--yes" in args
+        total = sum(db.count(t) for t in db._TABLES)
+        if total == 0:
+            print(f"HydraDB local memory is already empty ({db.location}).")
+            return
+        if not force:
+            print(f"This will permanently clear {total} local memory record(s) at:")
+            print(f"  {db.location}")
+            if db.cloud_active:
+                print("  (HydraDB cloud memory will NOT be affected.)")
+            try:
+                ans = input("Proceed? [y/N] ").strip().lower()
+            except (EOFError, KeyboardInterrupt):
+                ans = ""
+            if ans not in ("y", "yes"):
+                print("Reset cancelled.")
+                return
+        counts = db.reset()
+        print(f"Cleared HydraDB local memory ({db.location}):")
+        for table, n in counts.items():
+            if n:
+                print(f"  - {table}: {n}")
+        if db.cloud_active:
+            print("HydraDB cloud memory was left untouched.")
+        return
 
     if args and args[0] == "timeline":
         from hydradb import get_db

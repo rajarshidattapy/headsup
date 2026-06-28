@@ -291,9 +291,11 @@ class Anakin:
                 c_tokens |= _tokenize(b)
 
             matched = sorted(local_tokens & c_tokens)
-            # Jaccard over behaviour tokens
             union = local_tokens | c_tokens
-            sim = (len(matched) / len(union)) if union else 0.0
+            jaccard = (len(matched) / len(union)) if union else 0.0
+            # campaign coverage: how many of THIS campaign's behaviours we exhibit
+            coverage = (len(matched) / len(c_tokens)) if c_tokens else 0.0
+            sim = max(jaccard, coverage)
 
             # hard IOC matches dominate
             c_domains = c.get("ioc_domains", [])

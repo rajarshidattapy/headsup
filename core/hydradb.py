@@ -627,6 +627,28 @@ class HydraDB:
             return []
         return self._cloud.recall(query, metadata_filters, max_results)
 
+    _TABLES = ("process_events", "network_events", "system_events",
+               "threat_intelligence", "incidents", "predictions")
+
+    def reset(self) -> dict:
+        """Wipe all local memory tables. Returns prior row counts per table.
+
+        Only clears the local store (SQLite/Postgres). HydraDB cloud memory, if
+        configured, is durable and is intentionally left untouched.
+        """
+        counts = {t: self.count(t) for t in self._TABLES}
+        with self._lock:
+            cur = self._conn.cursor()
+            for t in self._TABLES:
+                cur.execute(f"DELETE FROM {t}")
+            if not self._pg:
+                try:
+                    cur.execute("DELETE FROM sqlite_sequence")
+                except Exception:
+                    pass
+                self._conn.commit()
+        return counts
+
     def close(self) -> None:
         try:
             self._conn.close()

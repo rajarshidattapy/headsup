@@ -607,6 +607,34 @@ class _Predictor:
         self._recent: deque = deque(maxlen=12)
         self._last_pred = 0.0
 
+    # canonical malware behaviours derived from the recent event chain — these
+    # match Anakin/threat-intel campaign behaviours far better than raw summaries.
+    _KEYWORD_BEHAVIORS = {
+        "credential": "browser credential theft", "password": "browser credential theft",
+        "exfil": "data exfiltration", "encrypt": "file encryption",
+        "ransom": "file encryption", "keylog": "keylogging",
+        "inject": "process injection", "powershell": "powershell execution",
+        "beacon": "command-and-control", "c2": "command-and-control",
+        "clipboard": "clipboard hijacking", "shadow": "shadow copy deletion",
+    }
+
+    def _canonical_behaviors(self) -> list[str]:
+        kinds = {e["kind"] for e in self._recent}
+        text = " ".join(e.get("summary", "") for e in self._recent).lower()
+        b: list[str] = []
+        if kinds & {"download", "file"}:
+            b.append("downloaded executable")
+        if "registry" in kinds:
+            b.append("registry persistence")
+        if "startup" in kinds:
+            b.append("startup persistence")
+        if "network" in kinds:
+            b.append("foreign network connection")
+        for kw, behaviour in self._KEYWORD_BEHAVIORS.items():
+            if kw in text and behaviour not in b:
+                b.append(behaviour)
+        return b
+
     def on_event(self, ev: dict) -> None:
         score = ev.get("risk_score", 0) or 0
         if score >= 2:
@@ -625,8 +653,8 @@ class _Predictor:
             return
         self._last_pred = now
 
-        chain = [e["summary"] for e in self._recent]
-        behaviors = [e.get("summary", "") for e in self._recent]
+        chain = [f"{e['kind']}: {e['summary']}" for e in self._recent]
+        behaviors = self._canonical_behaviors()
         match = self.anakin.match(behaviors)
         prediction = self.analyst.predict(chain[-6:])
         conf = (match["similarity"] / 100.0) if match else 0.6
@@ -637,11 +665,12 @@ class _Predictor:
                               prediction=prediction.split(chr(10))[0],
                               severity="HIGH" if not match else match.get("severity", "HIGH"))
         self.db.store_prediction("machine behaviour", prediction, conf, inc_id)
+        entry = {
+            "ts": datetime.now().strftime("%H:%M:%S"),
+            "text": prediction, "match": match, "web": "",
+        }
         with self.state.lock:
-            self.state.predictions.appendleft({
-                "ts": datetime.now().strftime("%H:%M:%S"),
-                "text": prediction, "match": match,
-            })
+            self.state.predictions.appendleft(entry)
             if match:
                 self.state.intel_match = match
         if self.tg and getattr(self.tg, "ready", False):
@@ -651,6 +680,36 @@ class _Predictor:
                 self.tg.send_alert(
                     f"🔴 <b>HeadsUp Prediction</b>\n{summary}{extra}\n"
                     f"{_markup_escape(prediction)[:300]}")
+            except Exception:
+                pass
+        # Fresh, cited web context on the matched campaign — fetched off the hot
+        # path so the monitor loop and the alert above are never blocked.
+        if match and self.anakin.web_search_available:
+            threading.Thread(target=self._enrich, args=(match, entry, inc_id),
+                             daemon=True, name="hu-webintel").start()
+
+    def _enrich(self, match: dict, entry: dict, inc_id: str) -> None:
+        """Background: Anakin web search on the campaign → cited live context."""
+        try:
+            query = (f"{match['threat_name']} malware campaign: latest indicators of "
+                     f"compromise, behavior, and remediation")
+            ctx = self.anakin.web_answer(query, limit=4)
+        except Exception:
+            return
+        if not ctx or ctx.startswith(("No web results", "Anakin web search needs")):
+            return
+        with self.state.lock:
+            entry["web"] = ctx
+        try:
+            self.db.store_prediction(f"web-intel:{match['threat_name']}", ctx,
+                                     match["similarity"] / 100.0, inc_id)
+        except Exception:
+            pass
+        if self.tg and getattr(self.tg, "ready", False):
+            try:
+                self.tg.send_alert(
+                    f"🌐 <b>HeadsUp · {match['threat_name']} web intel</b>\n"
+                    f"{_markup_escape(ctx)[:600]}")
             except Exception:
                 pass
 
@@ -867,6 +926,13 @@ def build_intelligence_panel(state, db, analyst, tg) -> Panel:
         p = preds[0]
         for ln in p["text"].split("\n")[:5]:
             lines.append(f"  [yellow]{_markup_escape(ln)}[/]")
+        web = p.get("web")
+        if web:
+            lines.append("  [bold bright_magenta]🌐 Live web intel (Anakin):[/]")
+            for ln in [l for l in web.split("\n") if l.strip()][:3]:
+                lines.append(f"    [dim]{_markup_escape(ln[:72])}[/]")
+        elif p.get("match"):
+            lines.append("  [dim]🌐 searching Anakin for live intel…[/dim]")
     if log:
         lines.append("")
         lines.append("[bold bright_cyan]REMEDIATION LOG[/]")
