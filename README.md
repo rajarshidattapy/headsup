@@ -1,5 +1,6 @@
 # HeadsUp
-<img width="1377" height="174" alt="image" src="https://github.com/user-attachments/assets/89d94001-b5e0-49f9-8650-c40763d1556b" />
+<img width="1378" height="168" alt="image" src="https://github.com/user-attachments/assets/f11adf85-3a4b-474c-9ed7-bd22e0399164" />
+
 
 <p align="center">
   <h3 align="center">AI-Powered Threat Memory Engine for Your Computer</h3>
