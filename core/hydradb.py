@@ -129,30 +129,36 @@ class _HydraCloud:
             threading.Thread(target=self._worker, daemon=True, name="hydradb-ingest").start()
 
     # ── ingestion (non-blocking) ────────────────────────────────────────────
-    def ingest(self, text: str, metadata: dict, source_id: str = "", infer: bool = False) -> None:
+    def ingest(self, text: str, metadata: dict, source_id: str = "", infer: bool = False,
+               sub_tenant_id: Optional[str] = None) -> None:
         if not self.available:
             return
+        # Snapshot the sub_tenant at queue time so switching it later doesn't
+        # affect already-queued items (avoids the race in seed/demo scripts).
+        st = self.sub_tenant_id if sub_tenant_id is None else sub_tenant_id
         try:
-            self._q.put_nowait((text, metadata, source_id, infer))
+            self._q.put_nowait((text, metadata, source_id, infer, st))
         except queue.Full:
             pass  # best-effort; drop under pressure rather than block monitoring
 
     def _worker(self) -> None:
         while True:
-            text, metadata, source_id, infer = self._q.get()
+            text, metadata, source_id, infer, sub_tenant_id = self._q.get()
             try:
-                self._post_memory(text, metadata, source_id, infer)
+                self._post_memory(text, metadata, source_id, infer, sub_tenant_id)
             except Exception:
                 pass
 
-    def _post_memory(self, text: str, metadata: dict, source_id: str, infer: bool) -> None:
+    def _post_memory(self, text: str, metadata: dict, source_id: str, infer: bool,
+                     sub_tenant_id: str = "") -> None:
         item: dict = {"text": text, "infer": bool(infer),
                       "tenant_metadata": json.dumps(_clean_meta(metadata))}
         if source_id:
             item["source_id"] = source_id
         body: dict = {"memories": [item], "tenant_id": self.tenant_id, "upsert": True}
-        if self.sub_tenant_id:
-            body["sub_tenant_id"] = self.sub_tenant_id
+        st = sub_tenant_id if sub_tenant_id is not None else self.sub_tenant_id
+        if st:
+            body["sub_tenant_id"] = st
         self._session.post(self.base + self.INGEST_PATH, json=body, timeout=self._timeout)
 
     # ── recall (best-effort, short timeout) ─────────────────────────────────

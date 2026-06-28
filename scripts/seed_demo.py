@@ -261,7 +261,13 @@ def seed_hydradb(db: HydraDB) -> dict[str, int]:
 
     console.print(Rule("[bold bright_cyan]Phase 1 · Scanning this laptop[/]"))
     console.print("[dim]Reading real processes and network connections via psutil…[/dim]")
+    console.print("[dim]Process/network events  →  sub-tenant: [bold]laptop-asus[/]"
+                  "   |   Threat intel  →  sub-tenant: [bold]demo[/][/dim]")
     console.print()
+
+    # Switch cloud sub-tenant to laptop-asus for real machine data
+    if hasattr(db, "_cloud"):
+        db._cloud.sub_tenant_id = "laptop-asus"
 
     # ── 1. Live processes ────────────────────────────────────────────────────
     proc_rows = []
@@ -400,8 +406,11 @@ def seed_hydradb(db: HydraDB) -> dict[str, int]:
             console.print(f"  [bold red]{inc_id}[/]  [{sev}]  {summary[:72]}")
 
     # ── 4. Threat intel (domain knowledge, always relevant) ──────────────────
+    # Switch back to demo sub-tenant for intel (not machine-specific)
+    if hasattr(db, "_cloud"):
+        db._cloud.sub_tenant_id = "demo"
     console.print()
-    console.print(Rule("[dim]Storing threat intel[/dim]"))
+    console.print(Rule("[dim]Storing threat intel → demo[/dim]"))
     with Progress(SpinnerColumn(), TextColumn("{task.description}"),
                   BarColumn(), TaskProgressColumn(), console=console) as prog:
         t = prog.add_task("[bold bright_red]Threat intel[/]", total=len(_THREAT_INTEL))
