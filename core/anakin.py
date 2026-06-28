@@ -1,14 +1,19 @@
-"""Anakin — emerging threat-intelligence ingestion for HeadsUp.
+"""Anakin — AI-powered web search + emerging threat-intelligence for HeadsUp.
 
-Pulls the latest malware campaigns / advisories from the web via the Anakin API
-(CISA, CVE feeds, Microsoft Security Blog, BleepingComputer, The Hacker News,
-Reddit), summarises each into the ``threat_intelligence`` schema (optionally with
-Gemma), and stores them in HydraDB.
+Anakin's ``/v1/search`` endpoint performs an AI-powered web search and returns
+ranked results with snippets and citations. HeadsUp uses it two ways:
+
+1. **Threat-intel ingestion** — query the web for the latest malware campaigns /
+   advisories (CISA, CVE feeds, Microsoft, BleepingComputer, The Hacker News,
+   Reddit), then summarise the results into the ``threat_intelligence`` schema
+   (with Gemma when available) and store them in HydraDB.
+2. **Copilot web search** — answer live security questions ("explain this malware
+   campaign", "search for …") grounded in fresh, cited web sources.
 
 Without ``ANAKIN_API_KEY`` it falls back to a bundled set of recent real-world
 campaigns (``data/sample_intel.json``) so HeadsUp always has intel to correlate
-against. Local machine behaviour can then be matched against these campaigns to
-surface "this looks like the X campaign (NN% similarity)".
+against. Local machine behaviour is matched against these campaigns to surface
+"this looks like the X campaign (NN% similarity)".
 """
 from __future__ import annotations
 
@@ -27,13 +32,24 @@ except ImportError:  # pragma: no cover
     _HAS_REQUESTS = False
 
 _SAMPLE_PATH = Path(__file__).parent / "data" / "sample_intel.json"
-_ANAKIN_URL = os.environ.get("ANAKIN_API_URL", "https://api.anakin.ai/v1/threat-intel")
+_ANAKIN_URL = os.environ.get("ANAKIN_API_URL", "https://api.anakin.io/v1/search")
+_THREAT_PROMPT = (
+    "Latest malware campaigns, ransomware, infostealers, and actively exploited "
+    "CVEs reported in the last two weeks by CISA, Microsoft Security, "
+    "BleepingComputer and The Hacker News — include the threat name, affected "
+    "software, indicators of compromise, and observed behaviors."
+)
 _STOPWORDS = {"the", "a", "an", "of", "to", "and", "for", "via", "with", "from", "on"}
 
 
 def _tokenize(text: str) -> set[str]:
     toks = re.split(r"[^a-z0-9]+", (text or "").lower())
     return {t for t in toks if t and t not in _STOPWORDS and len(t) > 2}
+
+
+def _domain_of(url: str) -> str:
+    m = re.match(r"https?://([^/]+)", url or "")
+    return m.group(1).replace("www.", "") if m else ""
 
 
 class Anakin:
@@ -45,8 +61,69 @@ class Anakin:
         self._lock = threading.Lock()
 
     @property
+    def web_search_available(self) -> bool:
+        return bool(self.api_key and _HAS_REQUESTS)
+
+    @property
     def source(self) -> str:
-        return "Anakin API" if (self.api_key and _HAS_REQUESTS) else "bundled sample feed"
+        return "Anakin web search" if self.web_search_available else "bundled sample feed"
+
+    # ── AI-powered web search (Anakin /v1/search) ─────────────────────────────
+
+    def search(self, prompt: str, limit: int = 5) -> dict:
+        """AI-powered web search. Returns {"id", "results"[], "summary"}.
+
+        Empty dict-shape when no API key / requests is unavailable.
+        """
+        if not self.web_search_available:
+            return {"id": "", "results": [], "summary": ""}
+        resp = requests.post(
+            _ANAKIN_URL,
+            headers={"X-API-Key": self.api_key, "Content-Type": "application/json"},
+            json={"prompt": prompt, "limit": limit},
+            timeout=20,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        if not isinstance(data, dict):
+            return {"id": "", "results": [], "summary": ""}
+        return {
+            "id": data.get("id", ""),
+            "results": data.get("results") or [],
+            "summary": data.get("summary") or data.get("answer") or "",
+        }
+
+    def web_answer(self, question: str, limit: int = 5) -> str:
+        """Search the web via Anakin and return a cited, Gemma-synthesised answer.
+
+        Returns "" when web search is unavailable (caller decides the fallback).
+        """
+        if not self.web_search_available:
+            return ""
+        try:
+            res = self.search(question, limit=limit)
+        except Exception as exc:
+            return f"Anakin web search failed: {str(exc)[:80]}"
+        results = res.get("results", [])
+        summary = res.get("summary", "")
+        if not results and not summary:
+            return "No web results found."
+        sources = "\n".join(
+            f"[{i+1}] {r.get('title', '')} — {r.get('url', '')}\n    "
+            f"{(r.get('snippet') or '')[:200]}"
+            for i, r in enumerate(results))
+        cite_list = "\n".join(f"[{i+1}] {r.get('url', '')}" for i, r in enumerate(results))
+
+        if summary:
+            return summary + (f"\n\nSources:\n{cite_list}" if cite_list else "")
+        if self.analyst is not None and getattr(self.analyst, "available", False):
+            ans = self.analyst._chat(
+                "You are a security research assistant. Answer using ONLY the "
+                "provided web sources and cite them inline as [n]. Be concise.",
+                f"Question: {question}\n\nWeb sources:\n{sources}", 600)
+            if ans and not ans.startswith("[AI error"):
+                return ans + (f"\n\nSources:\n{cite_list}" if cite_list else "")
+        return "Top web results:\n" + sources
 
     # ── ingestion ─────────────────────────────────────────────────────────────
 
@@ -90,33 +167,83 @@ class Anakin:
     # ── fetching ──────────────────────────────────────────────────────────────
 
     def _fetch(self) -> list[dict]:
-        if self.api_key and _HAS_REQUESTS:
+        if self.web_search_available:
             try:
-                raw = self._fetch_anakin()
-                if raw:
-                    return [self._normalize(x) for x in raw]
+                campaigns = self._fetch_anakin()
+                if campaigns:
+                    return campaigns
             except Exception:
                 pass  # fall back to bundled feed
         return self._fetch_bundled()
 
     def _fetch_anakin(self) -> list[dict]:
-        """Call the Anakin API. Endpoint shape is configurable via env.
+        """Web-search the latest threats via Anakin and structure the results."""
+        results = self.search(_THREAT_PROMPT, limit=8).get("results", [])
+        if not results:
+            return []
+        return self._extract_campaigns(results)
 
-        Expected to return a JSON list (or {"items": [...]}) of threat reports.
-        Each report is summarised into our schema by :meth:`_normalize` (which
-        uses Gemma when available).
+    def _extract_campaigns(self, results: list[dict]) -> list[dict]:
+        """Turn raw web search results into threat_intelligence records.
+
+        Uses Gemma to extract structured, named campaigns from the snippets when
+        available; otherwise maps one record per search result.
         """
-        resp = requests.get(
-            _ANAKIN_URL,
-            headers={"Authorization": f"Bearer {self.api_key}",
-                     "Accept": "application/json"},
-            timeout=12,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-        if isinstance(data, dict):
-            data = data.get("items") or data.get("data") or data.get("results") or []
-        return data if isinstance(data, list) else []
+        if self.analyst is not None and getattr(self.analyst, "available", False):
+            digest = "\n\n".join(
+                f"TITLE: {r.get('title', '')}\nURL: {r.get('url', '')}\n"
+                f"DATE: {r.get('date', '')}\nSNIPPET: {r.get('snippet', '')}"
+                for r in results[:8])[:6000]
+            prompt = (
+                "From these web search results about cybersecurity threats, extract "
+                "distinct, named malware campaigns or advisories as a JSON array. "
+                "Each item: {threat_name, ioc_domains[], ioc_hashes[], behaviors[], "
+                "severity (LOW|MEDIUM|HIGH|CRITICAL), source, published_at}. Only "
+                "include real, named threats. Return ONLY the JSON array.\n\n" + digest)
+            out = self.analyst._chat(
+                "You output only strict JSON arrays for threat-intelligence extraction.",
+                prompt, 900)
+            s, e = out.find("["), out.rfind("]") + 1
+            if s >= 0 and e > s:
+                try:
+                    arr = json.loads(out[s:e])
+                    if isinstance(arr, list):
+                        campaigns = [self._coerce(x) for x in arr if isinstance(x, dict)]
+                        campaigns = [c for c in campaigns if c["threat_name"]]
+                        if campaigns:
+                            return campaigns
+                except Exception:
+                    pass
+        # fallback: one record per search result (no Gemma)
+        return [self._result_to_campaign(r) for r in results]
+
+    @staticmethod
+    def _coerce(item: dict) -> dict:
+        """Fill schema defaults on a Gemma-extracted record."""
+        def _aslist(v):
+            return v if isinstance(v, list) else ([v] if v else [])
+        return {
+            "threat_name": (item.get("threat_name") or item.get("name") or "").strip(),
+            "ioc_domains": _aslist(item.get("ioc_domains") or item.get("domains")),
+            "ioc_hashes": _aslist(item.get("ioc_hashes") or item.get("hashes")),
+            "behaviors": _aslist(item.get("behaviors") or item.get("tags")),
+            "severity": (item.get("severity") or "").upper(),
+            "source": item.get("source") or "Anakin",
+            "published_at": item.get("published_at") or item.get("date", ""),
+        }
+
+    def _result_to_campaign(self, r: dict) -> dict:
+        """Map a single web search result to a loose threat_intelligence record."""
+        title = (r.get("title") or "").strip() or "Web threat report"
+        snippet = (r.get("snippet") or "").strip()
+        return {
+            "threat_name": title[:80],
+            "ioc_domains": [], "ioc_hashes": [],
+            "behaviors": [snippet] if snippet else [],
+            "severity": "",
+            "source": _domain_of(r.get("url", "")) or "Anakin",
+            "published_at": r.get("date") or r.get("last_updated") or "",
+        }
 
     def _fetch_bundled(self) -> list[dict]:
         try:
@@ -124,40 +251,6 @@ class Anakin:
                 return json.load(f)
         except Exception:
             return []
-
-    def _normalize(self, item: dict) -> dict:
-        """Coerce an arbitrary Anakin item into the threat_intelligence schema.
-
-        If the item is raw text and Gemma is available, ask it to extract the
-        structured fields; otherwise best-effort map common keys.
-        """
-        if all(k in item for k in ("threat_name", "behaviors")):
-            return item
-        if self.analyst is not None and getattr(self.analyst, "available", False):
-            blob = json.dumps(item)[:2000]
-            prompt = (
-                "Extract a threat-intel record as JSON with keys threat_name, "
-                "ioc_domains[], ioc_hashes[], behaviors[], severity, source, "
-                "published_at from this report:\n" + blob)
-            out = self.analyst._chat(
-                "You output only strict JSON for threat intelligence extraction.",
-                prompt, 300)
-            s, e = out.find("{"), out.rfind("}") + 1
-            if s >= 0 and e > s:
-                try:
-                    return json.loads(out[s:e])
-                except Exception:
-                    pass
-        # best-effort fallback mapping
-        return {
-            "threat_name": item.get("title") or item.get("name") or "Unknown campaign",
-            "ioc_domains": item.get("domains") or item.get("ioc_domains") or [],
-            "ioc_hashes": item.get("hashes") or item.get("ioc_hashes") or [],
-            "behaviors": item.get("behaviors") or item.get("tags") or [],
-            "severity": item.get("severity", ""),
-            "source": item.get("source", "Anakin"),
-            "published_at": item.get("published_at") or item.get("date", ""),
-        }
 
     # ── matching ──────────────────────────────────────────────────────────────
 

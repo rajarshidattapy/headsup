@@ -361,6 +361,10 @@ def parse_command(text: str) -> tuple[str, dict]:
         return "show_foreign", {}
     if re.match(r'show\s+(?:high|critical)', t, re.I):
         return "show_high", {}
+    m = re.match(r'(?:/search|search the web for|web search|search|web|look up|google)\s+(.+)',
+                 t, re.I)
+    if m:
+        return "websearch", {"query": m.group(1).strip()}
     if re.search(r'\b(today|changed|summar)', t, re.I):
         return "summary", {}
     if re.search(r'\b(predict|next|going to happen)', t, re.I):
@@ -449,6 +453,10 @@ def _run_chat_command(state, db, engine, analyst, anakin, msg: str) -> str:
             return f"I have no memory of {args['ip']} — first time seen."
         return (f"Yes — {args['ip']} seen {c['hits']}x before (worst risk {c['worst']}). "
                 f"First {c['first_seen']}, last {c['last_seen']}.")
+    if cmd == "websearch":
+        if not anakin.web_search_available:
+            return "Anakin web search needs ANAKIN_API_KEY (set it in .env)."
+        return anakin.web_answer(args["query"]) or "No web results found."
     if cmd == "summary":
         return analyst.summarize(db.timeline(40))
     if cmd == "predict":
@@ -923,7 +931,7 @@ def build_chat_panel(state, inner_width=76) -> Panel:
         visible.append("[dim]  ENTER send  ·  ESC cancel  ·  ↑/↓ history[/dim]")
     else:
         hint = ("[dim]  Ask: \"what changed today?\" · \"have I seen 1.2.3.4?\" · "
-                "\"predict\" · \"show foreign\"[/dim]")
+                "\"predict\" · \"search lumma stealer\"[/dim]")
         visible.append("[dim]  [bold bright_cyan]T[/] open AI copilot[/dim]")
         visible.append(hint)
 
@@ -1064,7 +1072,8 @@ def run_copilot() -> None:
     console.print(Rule("[bold bright_cyan]HeadsUp Copilot[/]"))
     console.print('[dim]Ask anything. Examples:\n'
                   '  "What changed today?"   "Have I seen 45.33.32.156 before?"\n'
-                  '  "Predict what happens next"   "Show foreign"   "kill pid 1234"[/dim]\n')
+                  '  "Predict what happens next"   "Search latest ransomware campaigns"\n'
+                  '  "Show foreign"   "kill pid 1234"[/dim]\n')
     while True:
         try:
             q = Prompt.ask("[bold bright_cyan]>[/]")
