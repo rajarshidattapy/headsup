@@ -735,6 +735,32 @@ def maybe_request_analysis(engine, analyst) -> None:
             "suspicious": suspicious, "risk": risk_label, "pid": conn.pid,
         })
 
+
+def maybe_telegram_alert(state, engine, analyst, tg) -> None:
+    """Push a Telegram alert the first time a connection is tagged SUSPICIOUS
+    or CRITICAL by the analyst (deduped per connection + level)."""
+    if tg is None or not getattr(tg, "ready", False):
+        return
+    for conn in engine.snapshot()["connections"]:
+        ck = conn_key(conn)
+        a = analyst.get(ck)
+        if a is None or a.pending or a.level not in ("SUSPICIOUS", "CRITICAL"):
+            continue
+        akey = (ck, a.level)
+        with state.lock:
+            if akey in state.alerted_keys:
+                continue
+            state.alerted_keys.add(akey)
+        rip = conn.raddr.ip if conn.raddr else (a.remote or "")
+        rport = conn.raddr.port if conn.raddr else ""
+        geo = geo_country(rip) if rip else ""
+        try:
+            tg.send_headsup_alert(level=a.level, process=a.process or "unknown",
+                                  pid=a.pid, remote=rip, rport=rport, geo=geo,
+                                  reason=a.reason, action=a.action)
+        except Exception:
+            pass
+
 # ── UI panels ─────────────────────────────────────────────────────────────────
 
 def build_security_center(state, db, engine) -> Panel:
@@ -1067,6 +1093,7 @@ def run_monitor(resolve: bool = False, auto: bool = False, once: bool = False) -
         while True:
             try:
                 maybe_request_analysis(engine, analyst)
+                maybe_telegram_alert(state, engine, analyst, tg)
             except Exception:
                 pass
             time.sleep(2)

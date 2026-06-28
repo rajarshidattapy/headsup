@@ -1,0 +1,5403 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-28T10:24:54.705345Z",
+    "host": "LAPTOP-UFKQLC26",
+    "hydradb_backend": "sqlite",
+    "hydradb_location": "C:\\Users\\asus\\.headsup\\headsup.db"
+  },
+  "health": {
+    "score": 0,
+    "label": "CRITICAL"
+  },
+  "timeline": [
+    {
+      "ts": "2026-06-28T10:24:48Z",
+      "kind": "process",
+      "summary": "RuntimeBroker.exe started (pid 24344)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:24:37Z",
+      "kind": "process",
+      "summary": "RuntimeBroker.exe started (pid 13596)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:24:16Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 15468)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:24:15Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 18128)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:24:03Z",
+      "kind": "process",
+      "summary": "AsusProArtHost.exe started (pid 11492)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:23:41Z",
+      "kind": "process",
+      "summary": "NVIDIA Overlay.exe started (pid 34696)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:23:40Z",
+      "kind": "process",
+      "summary": "audiodg.exe started (pid 11696)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:23:39Z",
+      "kind": "network",
+      "summary": "chrome.exe → 18.97.36.54 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:23:12Z",
+      "kind": "network",
+      "summary": "Telegram.exe → 91.108.56.123 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:23:07Z",
+      "kind": "network",
+      "summary": "chrome.exe → 18.226.241.237 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:23:00Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 23484)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:22:58Z",
+      "kind": "network",
+      "summary": "obs64.exe → 2001:41d0:26c:6f00:913e:6226:cfb3:680e (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:22:45Z",
+      "kind": "network",
+      "summary": "chrome.exe → 20.57.85.160 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:22:17Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 39804)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:22:13Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 32048)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:21:47Z",
+      "kind": "process",
+      "summary": "NVIDIA Overlay.exe started (pid 24272)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:21:46Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 18496)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:21:37Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 29744)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:21:30Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 37940)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:20:55Z",
+      "kind": "process",
+      "summary": "BioIso.exe started (pid 29028)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:20:26Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 13280)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:20:18Z",
+      "kind": "process",
+      "summary": "SearchIndexer.exe started (pid 17476)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:20:12Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 16216)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:19:55Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 20548)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:19:51Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 15800)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:19:38Z",
+      "kind": "process",
+      "summary": "StartMenuExperienceHost.exe started (pid 20052)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:19:32Z",
+      "kind": "network",
+      "summary": "chrome.exe → 2404:6800:4003:c04::bc (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:19:26Z",
+      "kind": "network",
+      "summary": "pid:0 → 2400:52e0:1500::1272:1 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:19:08Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 31644)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:18:44Z",
+      "kind": "process",
+      "summary": "powershell.exe started (pid 15940)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:18:41Z",
+      "kind": "network",
+      "summary": "python.exe → 100.31.173.133 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:18:37Z",
+      "kind": "network",
+      "summary": "pid:0 → 2606:4700:10::ac42:8c49 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:18:09Z",
+      "kind": "process",
+      "summary": "AppVShNotify.exe started (pid 28936)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:18:07Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 29824)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:17:40Z",
+      "kind": "network",
+      "summary": "mc-fw-host.exe → 3.111.241.224 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:17:37Z",
+      "kind": "network",
+      "summary": "Code.exe → 13.67.9.5 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:17:13Z",
+      "kind": "network",
+      "summary": "msedgewebview2.exe → 2603:1020:1204:4::41e (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:17:09Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 170.114.45.1 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:16:47Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 33816)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:16:35Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 39580)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:16:30Z",
+      "kind": "network",
+      "summary": "pid:0 → 216.150.16.193 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:15:59Z",
+      "kind": "process",
+      "summary": "TextInputHost.exe started (pid 25036)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:15:51Z",
+      "kind": "process",
+      "summary": "WidgetService.exe started (pid 42084)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:15:16Z",
+      "kind": "network",
+      "summary": "msedgewebview2.exe → 204.79.197.222 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:14:26Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 13792)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:13:54Z",
+      "kind": "process",
+      "summary": "msedgewebview2.exe started (pid 30524)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:13:49Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 38904)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:13:49Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 31228)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:13:47Z",
+      "kind": "process",
+      "summary": "Zoom.exe started (pid 34672)",
+      "risk_score": 4
+    },
+    {
+      "ts": "2026-06-28T10:13:28Z",
+      "kind": "network",
+      "summary": "svchost.exe → 2603:1040:a06:6::1 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:13:19Z",
+      "kind": "network",
+      "summary": "chrome.exe → 2404:6800:4003:c11::bc (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:13:17Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 2407:30c0:181::1 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:13:03Z",
+      "kind": "process",
+      "summary": "dllhost.exe started (pid 21936)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:53Z",
+      "kind": "network",
+      "summary": "pid:0 → 2606:4700:10::6814:1e7c (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:46Z",
+      "kind": "network",
+      "summary": "codex.exe → 2606:4700:4408::ac40:9bd1 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:36Z",
+      "kind": "process",
+      "summary": "explorer.exe started (pid 12560)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:35Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 170.114.2.88 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:28Z",
+      "kind": "process",
+      "summary": "AsusAppService.exe started (pid 36544)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:28Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 25484)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:15Z",
+      "kind": "process",
+      "summary": "Code.exe started (pid 23220)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:08Z",
+      "kind": "process",
+      "summary": "SnippingTool.exe started (pid 20840)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:12:02Z",
+      "kind": "network",
+      "summary": "MEGAsync.exe → 2a0b:e46:1:100::13 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:11:54Z",
+      "kind": "process",
+      "summary": "Code.exe started (pid 31620)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:11:54Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 170.114.52.83 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:11:51Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 11648)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:11:41Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 11820)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:11:40Z",
+      "kind": "network",
+      "summary": "pid:0 → 2606:4700::6812:1fad (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:11:34Z",
+      "kind": "process",
+      "summary": "conhost.exe started (pid 25360)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:11:21Z",
+      "kind": "network",
+      "summary": "chrome.exe → 2600:1901:1:292:: (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:10:43Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 34788)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:10:28Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 170.114.46.1 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:10:17Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 35704)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:10:01Z",
+      "kind": "process",
+      "summary": "nvsphelper64.exe started (pid 16948)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:09:19Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 38240)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:08:41Z",
+      "kind": "network",
+      "summary": "MEGAsync.exe → 2a0b:e46:1:101::135 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:08:38Z",
+      "kind": "network",
+      "summary": "SDXHelper.exe → 2603:1063:27:1::14 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:08:20Z",
+      "kind": "network",
+      "summary": "msedgewebview2.exe → 2620:1ec:46::254 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:07:47Z",
+      "kind": "process",
+      "summary": "Telegram.exe started (pid 36948)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:07:38Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 37024)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:07:37Z",
+      "kind": "network",
+      "summary": "chrome.exe → 2606:4700::6812:1fad (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:07:32Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 14852)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:07:28Z",
+      "kind": "network",
+      "summary": "chrome.exe → 216.150.16.193 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:07:14Z",
+      "kind": "network",
+      "summary": "chrome.exe → 2606:4700:440b::6812:2715 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:07:02Z",
+      "kind": "network",
+      "summary": "Code.exe → 140.82.112.22 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:06:22Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 20680)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:06:09Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 170.114.52.4 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:05:59Z",
+      "kind": "network",
+      "summary": "pid:0 → 2606:4700:4408::ac40:9bd1 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:05:54Z",
+      "kind": "network",
+      "summary": "chrome.exe → 34.218.171.104 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:05:51Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 24560)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:05:28Z",
+      "kind": "process",
+      "summary": "WmiApSrv.exe started (pid 32040)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:05:14Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 10788)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:05:03Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 17152)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:05:01Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 52.84.151.14 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:04:53Z",
+      "kind": "process",
+      "summary": "AppActions.exe started (pid 16076)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:04:20Z",
+      "kind": "network",
+      "summary": "Code.exe → 20.42.73.24 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:04:11Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 15912)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:04:00Z",
+      "kind": "process",
+      "summary": "RuntimeBroker.exe started (pid 10732)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:02:52Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 18952)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:02:47Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 12592)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:02:45Z",
+      "kind": "network",
+      "summary": "chrome.exe → 140.82.114.26 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:01:57Z",
+      "kind": "process",
+      "summary": "Code.exe started (pid 40508)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:01:49Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 10704)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:01:38Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 21636)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:01:36Z",
+      "kind": "process",
+      "summary": "PhoneExperienceHost.exe started (pid 19920)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:01:33Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 25252)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:00:58Z",
+      "kind": "network",
+      "summary": "chrome.exe → 98.86.28.11 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:00:50Z",
+      "kind": "network",
+      "summary": "chrome.exe → 13.207.83.9 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:00:46Z",
+      "kind": "process",
+      "summary": "ShellExperienceHost.exe started (pid 22984)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:00:36Z",
+      "kind": "process",
+      "summary": "browserhost.exe started (pid 39636)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:00:20Z",
+      "kind": "process",
+      "summary": "msedgewebview2.exe started (pid 42612)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:00:19Z",
+      "kind": "process",
+      "summary": "obs64.exe started (pid 26308)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T10:00:06Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 134.224.240.221 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:59:55Z",
+      "kind": "process",
+      "summary": "explorer.exe started (pid 11732)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:59:51Z",
+      "kind": "process",
+      "summary": "SDXHelper.exe started (pid 11292)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:59:44Z",
+      "kind": "network",
+      "summary": "servicehost.exe → 2406:7400:9::173e:c21 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:59:21Z",
+      "kind": "process",
+      "summary": "PushNotificationsLongRunningTask.exe started (pid 16820)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:59:20Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 19320)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:59:18Z",
+      "kind": "process",
+      "summary": "cmd.exe started (pid 19376)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:58:59Z",
+      "kind": "process",
+      "summary": "cmd.exe started (pid 39312)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:58:55Z",
+      "kind": "process",
+      "summary": "python.exe started (pid 43216)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:58:55Z",
+      "kind": "process",
+      "summary": "AsusSoftwareManagerAgent.exe started (pid 36348)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:58:48Z",
+      "kind": "process",
+      "summary": "taskhostw.exe started (pid 27492)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:58:37Z",
+      "kind": "network",
+      "summary": "Zoom.exe → 170.114.52.146 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:57:59Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 21016)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:57:58Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 43308)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:57:24Z",
+      "kind": "network",
+      "summary": "chrome.exe → 2600:1417:73::17d9:3482 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:57:19Z",
+      "kind": "process",
+      "summary": "NVIDIA Overlay.exe started (pid 34968)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:57:14Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 39072)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:57:02Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 31824)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:56:41Z",
+      "kind": "network",
+      "summary": "pid:0 → 20.204.245.84 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:56:37Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 13612)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:56:36Z",
+      "kind": "process",
+      "summary": "conhost.exe started (pid 40708)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:56:23Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 23560)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:56:17Z",
+      "kind": "process",
+      "summary": "SnippingTool.exe started (pid 25904)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:55:56Z",
+      "kind": "process",
+      "summary": "AsusSystemDiagnosis.exe started (pid 36008)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:55:50Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 26104)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:55:39Z",
+      "kind": "network",
+      "summary": "claude.exe → 2607:6bc0::10 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:55:38Z",
+      "kind": "process",
+      "summary": "MEGAsync.exe started (pid 18480)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:55:30Z",
+      "kind": "process",
+      "summary": "uihost.exe started (pid 31760)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:54:56Z",
+      "kind": "network",
+      "summary": "chrome.exe → 162.159.130.234 (?)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:54:48Z",
+      "kind": "process",
+      "summary": "Intel_PIE_Service.exe started (pid 11204)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:54:39Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 14008)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:54:24Z",
+      "kind": "process",
+      "summary": "WindowsTerminal.exe started (pid 36696)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:54:15Z",
+      "kind": "process",
+      "summary": "Code.exe started (pid 28196)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:53:57Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 42100)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:53:53Z",
+      "kind": "process",
+      "summary": "Code.exe started (pid 35820)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:53:48Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 20836)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:53:37Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 28788)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:53:35Z",
+      "kind": "process",
+      "summary": "RtkAudUService64.exe started (pid 17648)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:53:29Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 11364)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:52:59Z",
+      "kind": "process",
+      "summary": "cmd.exe started (pid 16728)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:52:58Z",
+      "kind": "process",
+      "summary": "NVDisplay.Container.exe started (pid 30632)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:52:24Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 13656)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:52:02Z",
+      "kind": "process",
+      "summary": "codex.exe started (pid 36444)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:51:45Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 17428)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:51:34Z",
+      "kind": "process",
+      "summary": "powershell.exe started (pid 13812)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:51:32Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 21328)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:51:19Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 32052)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:51:16Z",
+      "kind": "process",
+      "summary": "msedgewebview2.exe started (pid 15796)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:51:14Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 40376)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:50:57Z",
+      "kind": "process",
+      "summary": "WmiPrvSE.exe started (pid 16936)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:50:41Z",
+      "kind": "process",
+      "summary": "Code.exe started (pid 28664)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:50:40Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 32068)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:50:28Z",
+      "kind": "process",
+      "summary": "SystemSettings.exe started (pid 32392)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:50:20Z",
+      "kind": "process",
+      "summary": "msedgewebview2.exe started (pid 31812)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:49:30Z",
+      "kind": "process",
+      "summary": "conhost.exe started (pid 30128)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:49:13Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 14088)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:48:56Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 28780)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:48:35Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 32444)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:48:33Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 19968)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:48:16Z",
+      "kind": "process",
+      "summary": "AsusSoftwareManager.exe started (pid 22920)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:48:13Z",
+      "kind": "process",
+      "summary": "RuntimeBroker.exe started (pid 17992)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:48:08Z",
+      "kind": "process",
+      "summary": "dllhost.exe started (pid 19060)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:48:01Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 13816)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:47:18Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 32032)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:47:17Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 12748)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:46:38Z",
+      "kind": "process",
+      "summary": "unsecapp.exe started (pid 19960)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:45:59Z",
+      "kind": "process",
+      "summary": "UserOOBEBroker.exe started (pid 19448)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:45:35Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 34708)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:45:15Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 20200)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:45:09Z",
+      "kind": "process",
+      "summary": "Code.exe started (pid 38288)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:45:04Z",
+      "kind": "process",
+      "summary": "vmcompute.exe started (pid 36412)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:44:55Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 24916)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:44:43Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 41516)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:44:27Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 14112)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:43:57Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 21044)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:43:38Z",
+      "kind": "process",
+      "summary": "msedgewebview2.exe started (pid 40296)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:43:35Z",
+      "kind": "process",
+      "summary": "msedgewebview2.exe started (pid 29436)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:43:19Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 33640)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:42:58Z",
+      "kind": "process",
+      "summary": "Code.exe started (pid 40868)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:42:41Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 21596)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:42:33Z",
+      "kind": "process",
+      "summary": "OpenConsole.exe started (pid 42248)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:42:33Z",
+      "kind": "process",
+      "summary": "nvcontainer.exe started (pid 29096)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:42:32Z",
+      "kind": "process",
+      "summary": "msedgewebview2.exe started (pid 28104)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:42:19Z",
+      "kind": "process",
+      "summary": "ApplicationFrameHost.exe started (pid 18616)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:42:14Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 11088)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:41:54Z",
+      "kind": "process",
+      "summary": "NVDisplay.Container.exe started (pid 28144)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:41:26Z",
+      "kind": "process",
+      "summary": "backgroundTaskHost.exe started (pid 39156)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:41:05Z",
+      "kind": "process",
+      "summary": "chrome.exe started (pid 22900)",
+      "risk_score": 0
+    },
+    {
+      "ts": "2026-06-28T09:41:03Z",
+      "kind": "process",
+      "summary": "svchost.exe started (pid 15208)",
+      "risk_score": 0
+    }
+  ],
+  "process_events": [
+    {
+      "id": 341,
+      "timestamp": "2026-06-28T09:57:58Z",
+      "pid": 43308,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 340,
+      "timestamp": "2026-06-28T09:34:19Z",
+      "pid": 43264,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.80\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 339,
+      "timestamp": "2026-06-28T09:58:55Z",
+      "pid": 43216,
+      "process_name": "python.exe",
+      "parent_process": "powershell.exe",
+      "path": "C:\\Python314\\python.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 338,
+      "timestamp": "2026-06-28T09:35:47Z",
+      "pid": 42832,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 337,
+      "timestamp": "2026-06-28T10:00:20Z",
+      "pid": 42612,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.80\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 336,
+      "timestamp": "2026-06-28T09:42:33Z",
+      "pid": 42248,
+      "process_name": "OpenConsole.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\7e7950df89\\resources\\app\\node_modules\\node-pty\\build\\Release\\conpty\\OpenConsole.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 335,
+      "timestamp": "2026-06-28T09:53:57Z",
+      "pid": 42100,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 334,
+      "timestamp": "2026-06-28T10:15:51Z",
+      "pid": 42084,
+      "process_name": "WidgetService.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.WidgetsPlatformRuntime_1.6.19.0_x64__8wekyb3d8bbwe\\WidgetService\\WidgetService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 333,
+      "timestamp": "2026-06-28T09:34:35Z",
+      "pid": 42008,
+      "process_name": "NVIDIA Overlay.exe",
+      "parent_process": "NVIDIA Overlay.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\CEF\\NVIDIA Overlay.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 332,
+      "timestamp": "2026-06-28T09:44:43Z",
+      "pid": 41516,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 331,
+      "timestamp": "2026-06-28T09:27:05Z",
+      "pid": 41240,
+      "process_name": "Zoom.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Users\\asus\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe",
+      "risk_score": 4
+    },
+    {
+      "id": 330,
+      "timestamp": "2026-06-28T09:42:58Z",
+      "pid": 40868,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 329,
+      "timestamp": "2026-06-28T09:56:36Z",
+      "pid": 40708,
+      "process_name": "conhost.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\System32\\conhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 328,
+      "timestamp": "2026-06-28T10:01:57Z",
+      "pid": 40508,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 327,
+      "timestamp": "2026-06-28T09:51:14Z",
+      "pid": 40376,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 326,
+      "timestamp": "2026-06-28T09:43:38Z",
+      "pid": 40296,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.80\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 325,
+      "timestamp": "2026-06-28T09:29:06Z",
+      "pid": 40104,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 324,
+      "timestamp": "2026-06-28T09:37:48Z",
+      "pid": 39856,
+      "process_name": "WindowsPackageManagerServer.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.DesktopAppInstaller_1.28.240.0_x64__8wekyb3d8bbwe\\WindowsPackageManagerServer.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 323,
+      "timestamp": "2026-06-28T10:22:17Z",
+      "pid": 39804,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 322,
+      "timestamp": "2026-06-28T09:39:14Z",
+      "pid": 39724,
+      "process_name": "conhost.exe",
+      "parent_process": "pet.exe",
+      "path": "C:\\Windows\\System32\\conhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 321,
+      "timestamp": "2026-06-28T10:00:36Z",
+      "pid": 39636,
+      "process_name": "browserhost.exe",
+      "parent_process": "cmd.exe",
+      "path": "C:\\Program Files\\McAfee\\WebAdvisor\\browserhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 320,
+      "timestamp": "2026-06-28T10:16:35Z",
+      "pid": 39580,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 319,
+      "timestamp": "2026-06-28T09:28:53Z",
+      "pid": 39388,
+      "process_name": "AsusSwitch.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\ASUSSwitch\\AsusSwitch.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 318,
+      "timestamp": "2026-06-28T09:58:59Z",
+      "pid": 39312,
+      "process_name": "cmd.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 317,
+      "timestamp": "2026-06-28T09:41:26Z",
+      "pid": 39156,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 316,
+      "timestamp": "2026-06-28T09:57:14Z",
+      "pid": 39072,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 315,
+      "timestamp": "2026-06-28T10:13:49Z",
+      "pid": 38904,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 314,
+      "timestamp": "2026-06-28T09:35:23Z",
+      "pid": 38608,
+      "process_name": "RuntimeBroker.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 313,
+      "timestamp": "2026-06-28T09:39:49Z",
+      "pid": 38444,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 312,
+      "timestamp": "2026-06-28T09:45:09Z",
+      "pid": 38288,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 311,
+      "timestamp": "2026-06-28T10:09:19Z",
+      "pid": 38240,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 310,
+      "timestamp": "2026-06-28T10:21:30Z",
+      "pid": 37940,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 309,
+      "timestamp": "2026-06-28T09:37:23Z",
+      "pid": 37612,
+      "process_name": "OpenConsole.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\7e7950df89\\resources\\app\\node_modules\\node-pty\\build\\Release\\conpty\\OpenConsole.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 308,
+      "timestamp": "2026-06-28T09:31:30Z",
+      "pid": 37596,
+      "process_name": "pet.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\.vscode\\extensions\\ms-python.vscode-python-envs-1.36.0-win32-x64\\python-env-tools\\bin\\pet.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 307,
+      "timestamp": "2026-06-28T10:07:38Z",
+      "pid": 37024,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 306,
+      "timestamp": "2026-06-28T10:07:47Z",
+      "pid": 36948,
+      "process_name": "Telegram.exe",
+      "parent_process": "explorer.exe",
+      "path": "C:\\Program Files\\WindowsApps\\TelegramMessengerLLP.TelegramDesktop_6.8.2.0_x64__t4vj0pshhgkwm\\Telegram.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 305,
+      "timestamp": "2026-06-28T09:54:24Z",
+      "pid": 36696,
+      "process_name": "WindowsTerminal.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.11321.0_x64__8wekyb3d8bbwe\\WindowsTerminal.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 304,
+      "timestamp": "2026-06-28T10:12:28Z",
+      "pid": 36544,
+      "process_name": "AsusAppService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\AsusAppService\\AsusAppService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 303,
+      "timestamp": "2026-06-28T09:52:02Z",
+      "pid": 36444,
+      "process_name": "codex.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\.vscode\\extensions\\openai.chatgpt-26.623.42026-win32-x64\\bin\\windows-x86_64\\codex.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 302,
+      "timestamp": "2026-06-28T09:45:04Z",
+      "pid": 36412,
+      "process_name": "vmcompute.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\vmcompute.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 301,
+      "timestamp": "2026-06-28T09:58:55Z",
+      "pid": 36348,
+      "process_name": "AsusSoftwareManagerAgent.exe",
+      "parent_process": "AsusSoftwareManager.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\ASUSSoftwareManager\\AsusSoftwareManagerAgent.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 300,
+      "timestamp": "2026-06-28T09:36:30Z",
+      "pid": 36048,
+      "process_name": "dllhost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\dllhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 299,
+      "timestamp": "2026-06-28T09:31:23Z",
+      "pid": 36016,
+      "process_name": "dasHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\dasHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 298,
+      "timestamp": "2026-06-28T09:55:56Z",
+      "pid": 36008,
+      "process_name": "AsusSystemDiagnosis.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\ASUSSystemDiagnosis\\AsusSystemDiagnosis.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 297,
+      "timestamp": "2026-06-28T09:24:51Z",
+      "pid": 35888,
+      "process_name": "conhost.exe",
+      "parent_process": "cmd.exe",
+      "path": "C:\\Windows\\System32\\conhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 296,
+      "timestamp": "2026-06-28T09:53:53Z",
+      "pid": 35820,
+      "process_name": "Code.exe",
+      "parent_process": "",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 295,
+      "timestamp": "2026-06-28T10:10:17Z",
+      "pid": 35704,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 294,
+      "timestamp": "2026-06-28T09:32:27Z",
+      "pid": 35192,
+      "process_name": "OpenConsole.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.11321.0_x64__8wekyb3d8bbwe\\OpenConsole.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 293,
+      "timestamp": "2026-06-28T09:57:19Z",
+      "pid": 34968,
+      "process_name": "NVIDIA Overlay.exe",
+      "parent_process": "nvcontainer.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\CEF\\NVIDIA Overlay.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 292,
+      "timestamp": "2026-06-28T10:10:43Z",
+      "pid": 34788,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 291,
+      "timestamp": "2026-06-28T09:45:35Z",
+      "pid": 34708,
+      "process_name": "chrome.exe",
+      "parent_process": "explorer.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 290,
+      "timestamp": "2026-06-28T10:23:41Z",
+      "pid": 34696,
+      "process_name": "NVIDIA Overlay.exe",
+      "parent_process": "NVIDIA Overlay.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\CEF\\NVIDIA Overlay.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 289,
+      "timestamp": "2026-06-28T10:13:47Z",
+      "pid": 34672,
+      "process_name": "Zoom.exe",
+      "parent_process": "Zoom.exe",
+      "path": "C:\\Users\\asus\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe",
+      "risk_score": 4
+    },
+    {
+      "id": 288,
+      "timestamp": "2026-06-28T09:35:31Z",
+      "pid": 34496,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 287,
+      "timestamp": "2026-06-28T09:31:52Z",
+      "pid": 34016,
+      "process_name": "AsusOptimization.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\ASUSOptimization\\AsusOptimization.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 286,
+      "timestamp": "2026-06-28T10:16:47Z",
+      "pid": 33816,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 285,
+      "timestamp": "2026-06-28T09:33:23Z",
+      "pid": 33660,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 284,
+      "timestamp": "2026-06-28T09:43:19Z",
+      "pid": 33640,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 283,
+      "timestamp": "2026-06-28T09:38:11Z",
+      "pid": 33508,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 282,
+      "timestamp": "2026-06-28T09:48:35Z",
+      "pid": 32444,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 281,
+      "timestamp": "2026-06-28T09:50:28Z",
+      "pid": 32392,
+      "process_name": "SystemSettings.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 280,
+      "timestamp": "2026-06-28T09:50:40Z",
+      "pid": 32068,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 279,
+      "timestamp": "2026-06-28T09:51:19Z",
+      "pid": 32052,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 278,
+      "timestamp": "2026-06-28T10:22:13Z",
+      "pid": 32048,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 277,
+      "timestamp": "2026-06-28T10:05:28Z",
+      "pid": 32040,
+      "process_name": "WmiApSrv.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\wbem\\WmiApSrv.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 276,
+      "timestamp": "2026-06-28T09:47:18Z",
+      "pid": 32032,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 275,
+      "timestamp": "2026-06-28T09:57:02Z",
+      "pid": 31824,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 274,
+      "timestamp": "2026-06-28T09:50:20Z",
+      "pid": 31812,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.80\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 273,
+      "timestamp": "2026-06-28T09:55:30Z",
+      "pid": 31760,
+      "process_name": "uihost.exe",
+      "parent_process": "servicehost.exe",
+      "path": "C:\\Program Files\\McAfee\\WebAdvisor\\uihost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 272,
+      "timestamp": "2026-06-28T10:19:08Z",
+      "pid": 31644,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 271,
+      "timestamp": "2026-06-28T10:11:54Z",
+      "pid": 31620,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 270,
+      "timestamp": "2026-06-28T10:13:49Z",
+      "pid": 31228,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 269,
+      "timestamp": "2026-06-28T09:52:58Z",
+      "pid": 30632,
+      "process_name": "NVDisplay.Container.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvam.inf_amd64_6c98bb76a18a5f20\\Display.NvContainer\\NVDisplay.Container.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 268,
+      "timestamp": "2026-06-28T10:13:54Z",
+      "pid": 30524,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.69\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 267,
+      "timestamp": "2026-06-28T09:49:30Z",
+      "pid": 30128,
+      "process_name": "conhost.exe",
+      "parent_process": "codex.exe",
+      "path": "C:\\Windows\\System32\\conhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 266,
+      "timestamp": "2026-06-28T10:18:07Z",
+      "pid": 29824,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 265,
+      "timestamp": "2026-06-28T10:21:37Z",
+      "pid": 29744,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 264,
+      "timestamp": "2026-06-28T09:36:52Z",
+      "pid": 29612,
+      "process_name": "mc-neo-host.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\ProgramData\\McAfee\\wps\\content\\neo-core\\26.5.0.127\\mc-neo-host.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 263,
+      "timestamp": "2026-06-28T09:43:35Z",
+      "pid": 29436,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.80\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 262,
+      "timestamp": "2026-06-28T09:42:33Z",
+      "pid": 29096,
+      "process_name": "nvcontainer.exe",
+      "parent_process": "nvcontainer.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 261,
+      "timestamp": "2026-06-28T10:20:55Z",
+      "pid": 29028,
+      "process_name": "BioIso.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\BioIso.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 260,
+      "timestamp": "2026-06-28T09:35:04Z",
+      "pid": 28996,
+      "process_name": "AsusSystemAnalysis.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\ASUSSystemAnalysis\\AsusSystemAnalysis.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 259,
+      "timestamp": "2026-06-28T10:18:09Z",
+      "pid": 28936,
+      "process_name": "AppVShNotify.exe",
+      "parent_process": "OfficeClickToRun.exe",
+      "path": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\AppVShNotify.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 258,
+      "timestamp": "2026-06-28T09:53:37Z",
+      "pid": 28788,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 257,
+      "timestamp": "2026-06-28T09:48:56Z",
+      "pid": 28780,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 256,
+      "timestamp": "2026-06-28T09:50:41Z",
+      "pid": 28664,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 255,
+      "timestamp": "2026-06-28T09:27:21Z",
+      "pid": 28564,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.69\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 254,
+      "timestamp": "2026-06-28T09:54:15Z",
+      "pid": 28196,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 253,
+      "timestamp": "2026-06-28T09:41:54Z",
+      "pid": 28144,
+      "process_name": "NVDisplay.Container.exe",
+      "parent_process": "NVDisplay.Container.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\nvam.inf_amd64_6c98bb76a18a5f20\\Display.NvContainer\\NVDisplay.Container.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 252,
+      "timestamp": "2026-06-28T09:42:32Z",
+      "pid": 28104,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "SearchHost.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.69\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 251,
+      "timestamp": "2026-06-28T09:58:48Z",
+      "pid": 27492,
+      "process_name": "taskhostw.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\taskhostw.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 250,
+      "timestamp": "2026-06-28T09:32:37Z",
+      "pid": 26504,
+      "process_name": "AsusOSD.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\ASUSOptimization\\AsusOSD.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 249,
+      "timestamp": "2026-06-28T10:00:19Z",
+      "pid": 26308,
+      "process_name": "obs64.exe",
+      "parent_process": "explorer.exe",
+      "path": "C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 248,
+      "timestamp": "2026-06-28T09:55:50Z",
+      "pid": 26104,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 247,
+      "timestamp": "2026-06-28T09:34:44Z",
+      "pid": 25976,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 246,
+      "timestamp": "2026-06-28T09:56:17Z",
+      "pid": 25904,
+      "process_name": "SnippingTool.exe",
+      "parent_process": "",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2602.49.0_x64__8wekyb3d8bbwe\\SnippingTool\\SnippingTool.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 245,
+      "timestamp": "2026-06-28T10:12:28Z",
+      "pid": 25484,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 244,
+      "timestamp": "2026-06-28T10:11:34Z",
+      "pid": 25360,
+      "process_name": "conhost.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\System32\\conhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 243,
+      "timestamp": "2026-06-28T10:01:33Z",
+      "pid": 25252,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 242,
+      "timestamp": "2026-06-28T10:15:59Z",
+      "pid": 25036,
+      "process_name": "TextInputHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 241,
+      "timestamp": "2026-06-28T09:44:55Z",
+      "pid": 24916,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 240,
+      "timestamp": "2026-06-28T10:05:51Z",
+      "pid": 24560,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 239,
+      "timestamp": "2026-06-28T10:24:48Z",
+      "pid": 24344,
+      "process_name": "RuntimeBroker.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 238,
+      "timestamp": "2026-06-28T10:21:47Z",
+      "pid": 24272,
+      "process_name": "NVIDIA Overlay.exe",
+      "parent_process": "NVIDIA Overlay.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\CEF\\NVIDIA Overlay.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 237,
+      "timestamp": "2026-06-28T09:56:23Z",
+      "pid": 23560,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 236,
+      "timestamp": "2026-06-28T10:23:00Z",
+      "pid": 23484,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 235,
+      "timestamp": "2026-06-28T10:12:15Z",
+      "pid": 23220,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 234,
+      "timestamp": "2026-06-28T10:00:46Z",
+      "pid": 22984,
+      "process_name": "ShellExperienceHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\SystemApps\\ShellExperienceHost_cw5n1h2txyewy\\ShellExperienceHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 233,
+      "timestamp": "2026-06-28T09:48:16Z",
+      "pid": 22920,
+      "process_name": "AsusSoftwareManager.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\ASUSSoftwareManager\\AsusSoftwareManager.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 232,
+      "timestamp": "2026-06-28T09:41:05Z",
+      "pid": 22900,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 231,
+      "timestamp": "2026-06-28T10:13:03Z",
+      "pid": 21936,
+      "process_name": "dllhost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\dllhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 230,
+      "timestamp": "2026-06-28T10:01:38Z",
+      "pid": 21636,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 229,
+      "timestamp": "2026-06-28T09:42:41Z",
+      "pid": 21596,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 228,
+      "timestamp": "2026-06-28T09:51:32Z",
+      "pid": 21328,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 227,
+      "timestamp": "2026-06-28T09:43:57Z",
+      "pid": 21044,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 226,
+      "timestamp": "2026-06-28T09:57:59Z",
+      "pid": 21016,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 225,
+      "timestamp": "2026-06-28T09:33:55Z",
+      "pid": 20944,
+      "process_name": "powershell.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 224,
+      "timestamp": "2026-06-28T09:27:40Z",
+      "pid": 20888,
+      "process_name": "AsusOptimizationStartupTask.exe",
+      "parent_process": "AsusOptimization.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\asussci2.inf_amd64_cfd6e6fcf484217d\\ASUSOptimization\\AsusOptimizationStartupTask.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 223,
+      "timestamp": "2026-06-28T10:12:08Z",
+      "pid": 20840,
+      "process_name": "SnippingTool.exe",
+      "parent_process": "explorer.exe",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2602.49.0_x64__8wekyb3d8bbwe\\SnippingTool\\SnippingTool.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 222,
+      "timestamp": "2026-06-28T09:53:48Z",
+      "pid": 20836,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 221,
+      "timestamp": "2026-06-28T10:06:22Z",
+      "pid": 20680,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 220,
+      "timestamp": "2026-06-28T09:38:56Z",
+      "pid": 20616,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 219,
+      "timestamp": "2026-06-28T10:19:55Z",
+      "pid": 20548,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 218,
+      "timestamp": "2026-06-28T09:39:10Z",
+      "pid": 20492,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 217,
+      "timestamp": "2026-06-28T09:45:15Z",
+      "pid": 20200,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 216,
+      "timestamp": "2026-06-28T10:19:38Z",
+      "pid": 20052,
+      "process_name": "StartMenuExperienceHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 215,
+      "timestamp": "2026-06-28T09:29:32Z",
+      "pid": 20048,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 214,
+      "timestamp": "2026-06-28T09:48:33Z",
+      "pid": 19968,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 213,
+      "timestamp": "2026-06-28T09:46:38Z",
+      "pid": 19960,
+      "process_name": "unsecapp.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\wbem\\unsecapp.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 212,
+      "timestamp": "2026-06-28T10:01:36Z",
+      "pid": 19920,
+      "process_name": "PhoneExperienceHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.YourPhone_1.26042.99.0_x64__8wekyb3d8bbwe\\PhoneExperienceHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 211,
+      "timestamp": "2026-06-28T09:36:28Z",
+      "pid": 19548,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 210,
+      "timestamp": "2026-06-28T09:45:59Z",
+      "pid": 19448,
+      "process_name": "UserOOBEBroker.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\oobe\\UserOOBEBroker.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 209,
+      "timestamp": "2026-06-28T09:59:18Z",
+      "pid": 19376,
+      "process_name": "cmd.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 208,
+      "timestamp": "2026-06-28T09:59:20Z",
+      "pid": 19320,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 207,
+      "timestamp": "2026-06-28T09:48:08Z",
+      "pid": 19060,
+      "process_name": "dllhost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\SysWOW64\\dllhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 206,
+      "timestamp": "2026-06-28T10:02:52Z",
+      "pid": 18952,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 205,
+      "timestamp": "2026-06-28T09:34:06Z",
+      "pid": 18816,
+      "process_name": "mega-desktop-app-gfxworker.exe",
+      "parent_process": "MEGAsync.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\MEGAsync\\mega-desktop-app-gfxworker.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 204,
+      "timestamp": "2026-06-28T09:42:19Z",
+      "pid": 18616,
+      "process_name": "ApplicationFrameHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\ApplicationFrameHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 203,
+      "timestamp": "2026-06-28T10:21:46Z",
+      "pid": 18496,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 202,
+      "timestamp": "2026-06-28T09:55:38Z",
+      "pid": 18480,
+      "process_name": "MEGAsync.exe",
+      "parent_process": "",
+      "path": "C:\\Users\\asus\\AppData\\Local\\MEGAsync\\MEGAsync.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 201,
+      "timestamp": "2026-06-28T09:34:59Z",
+      "pid": 18172,
+      "process_name": "servicehost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Program Files\\McAfee\\WebAdvisor\\servicehost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 200,
+      "timestamp": "2026-06-28T10:24:15Z",
+      "pid": 18128,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 199,
+      "timestamp": "2026-06-28T09:48:13Z",
+      "pid": 17992,
+      "process_name": "RuntimeBroker.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 198,
+      "timestamp": "2026-06-28T09:53:35Z",
+      "pid": 17648,
+      "process_name": "RtkAudUService64.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\realtekservice.inf_amd64_9b2689b4e3586127\\RtkAudUService64.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 197,
+      "timestamp": "2026-06-28T10:20:18Z",
+      "pid": 17476,
+      "process_name": "SearchIndexer.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\SearchIndexer.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 196,
+      "timestamp": "2026-06-28T09:51:45Z",
+      "pid": 17428,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 195,
+      "timestamp": "2026-06-28T10:05:03Z",
+      "pid": 17152,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 194,
+      "timestamp": "2026-06-28T10:10:01Z",
+      "pid": 16948,
+      "process_name": "nvsphelper64.exe",
+      "parent_process": "nvcontainer.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\ShadowPlay\\nvsphelper64.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 193,
+      "timestamp": "2026-06-28T09:50:57Z",
+      "pid": 16936,
+      "process_name": "WmiPrvSE.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 192,
+      "timestamp": "2026-06-28T09:59:21Z",
+      "pid": 16820,
+      "process_name": "PushNotificationsLongRunningTask.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\MicrosoftCorporationII.WinAppRuntime.Singleton_4000.1082.2259.0_x64__8wekyb3d8bbwe\\PushNotificationsLongRunningTask.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 191,
+      "timestamp": "2026-06-28T09:52:59Z",
+      "pid": 16728,
+      "process_name": "cmd.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 190,
+      "timestamp": "2026-06-28T09:28:13Z",
+      "pid": 16720,
+      "process_name": "OpenConsole.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.11321.0_x64__8wekyb3d8bbwe\\OpenConsole.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 189,
+      "timestamp": "2026-06-28T09:39:40Z",
+      "pid": 16500,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 188,
+      "timestamp": "2026-06-28T10:20:12Z",
+      "pid": 16216,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 187,
+      "timestamp": "2026-06-28T10:04:53Z",
+      "pid": 16076,
+      "process_name": "AppActions.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\AppActions.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 186,
+      "timestamp": "2026-06-28T10:18:44Z",
+      "pid": 15940,
+      "process_name": "powershell.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 185,
+      "timestamp": "2026-06-28T10:04:11Z",
+      "pid": 15912,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 184,
+      "timestamp": "2026-06-28T10:19:51Z",
+      "pid": 15800,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 183,
+      "timestamp": "2026-06-28T09:51:16Z",
+      "pid": 15796,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.69\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 182,
+      "timestamp": "2026-06-28T10:24:16Z",
+      "pid": 15468,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 181,
+      "timestamp": "2026-06-28T09:40:14Z",
+      "pid": 15312,
+      "process_name": "ctfmon.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\ctfmon.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 180,
+      "timestamp": "2026-06-28T09:41:03Z",
+      "pid": 15208,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 179,
+      "timestamp": "2026-06-28T09:25:45Z",
+      "pid": 15152,
+      "process_name": "DataExchangeHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\DataExchangeHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 178,
+      "timestamp": "2026-06-28T09:25:18Z",
+      "pid": 14904,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "Zoom.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.80\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 177,
+      "timestamp": "2026-06-28T10:07:32Z",
+      "pid": 14852,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 176,
+      "timestamp": "2026-06-28T09:25:38Z",
+      "pid": 14820,
+      "process_name": "conhost.exe",
+      "parent_process": "cmd.exe",
+      "path": "C:\\Windows\\System32\\conhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 175,
+      "timestamp": "2026-06-28T09:26:27Z",
+      "pid": 14388,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 174,
+      "timestamp": "2026-06-28T09:44:27Z",
+      "pid": 14112,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 173,
+      "timestamp": "2026-06-28T09:49:13Z",
+      "pid": 14088,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 172,
+      "timestamp": "2026-06-28T09:54:39Z",
+      "pid": 14008,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 171,
+      "timestamp": "2026-06-28T09:36:52Z",
+      "pid": 13988,
+      "process_name": "CrossDeviceService.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\MicrosoftWindows.CrossDevice_1.26042.110.0_x64__cw5n1h2txyewy\\CrossDeviceService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 170,
+      "timestamp": "2026-06-28T09:48:01Z",
+      "pid": 13816,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 169,
+      "timestamp": "2026-06-28T09:51:34Z",
+      "pid": 13812,
+      "process_name": "powershell.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 168,
+      "timestamp": "2026-06-28T10:14:26Z",
+      "pid": 13792,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 167,
+      "timestamp": "2026-06-28T09:33:00Z",
+      "pid": 13696,
+      "process_name": "powershell.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 166,
+      "timestamp": "2026-06-28T09:52:24Z",
+      "pid": 13656,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 165,
+      "timestamp": "2026-06-28T09:56:37Z",
+      "pid": 13612,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 164,
+      "timestamp": "2026-06-28T10:24:37Z",
+      "pid": 13596,
+      "process_name": "RuntimeBroker.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 163,
+      "timestamp": "2026-06-28T09:37:31Z",
+      "pid": 13404,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 162,
+      "timestamp": "2026-06-28T10:20:26Z",
+      "pid": 13280,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 161,
+      "timestamp": "2026-06-28T09:47:17Z",
+      "pid": 12748,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 160,
+      "timestamp": "2026-06-28T10:02:47Z",
+      "pid": 12592,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 159,
+      "timestamp": "2026-06-28T10:12:36Z",
+      "pid": 12560,
+      "process_name": "explorer.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\explorer.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 158,
+      "timestamp": "2026-06-28T10:11:41Z",
+      "pid": 11820,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 157,
+      "timestamp": "2026-06-28T09:59:55Z",
+      "pid": 11732,
+      "process_name": "explorer.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\explorer.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 156,
+      "timestamp": "2026-06-28T10:23:40Z",
+      "pid": 11696,
+      "process_name": "audiodg.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\audiodg.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 155,
+      "timestamp": "2026-06-28T10:11:51Z",
+      "pid": 11648,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 154,
+      "timestamp": "2026-06-28T10:24:03Z",
+      "pid": 11492,
+      "process_name": "AsusProArtHost.exe",
+      "parent_process": "AsusProArtService.exe",
+      "path": "C:\\Program Files\\ASUS\\ProArt Creator Hub\\ProArtCreatorHubService\\AsusProArtHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 153,
+      "timestamp": "2026-06-28T09:36:16Z",
+      "pid": 11480,
+      "process_name": "CrossDeviceResume.exe",
+      "parent_process": "sihost.exe",
+      "path": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 152,
+      "timestamp": "2026-06-28T09:53:29Z",
+      "pid": 11364,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 151,
+      "timestamp": "2026-06-28T09:59:51Z",
+      "pid": 11292,
+      "process_name": "SDXHelper.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\SDXHelper.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 150,
+      "timestamp": "2026-06-28T09:54:48Z",
+      "pid": 11204,
+      "process_name": "Intel_PIE_Service.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\piecomponent.inf_amd64_7955510f793739e6\\Intel_PIE_Service.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 149,
+      "timestamp": "2026-06-28T09:42:14Z",
+      "pid": 11088,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 148,
+      "timestamp": "2026-06-28T09:26:50Z",
+      "pid": 11032,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 147,
+      "timestamp": "2026-06-28T09:35:00Z",
+      "pid": 10812,
+      "process_name": "taskhostw.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\taskhostw.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 146,
+      "timestamp": "2026-06-28T10:05:14Z",
+      "pid": 10788,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 145,
+      "timestamp": "2026-06-28T10:04:00Z",
+      "pid": 10732,
+      "process_name": "RuntimeBroker.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 144,
+      "timestamp": "2026-06-28T10:01:49Z",
+      "pid": 10704,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 143,
+      "timestamp": "2026-06-28T09:25:15Z",
+      "pid": 10672,
+      "process_name": "wlanext.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\wlanext.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 142,
+      "timestamp": "2026-06-28T09:40:46Z",
+      "pid": 10548,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 141,
+      "timestamp": "2026-06-28T10:19:18Z",
+      "pid": 10512,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 140,
+      "timestamp": "2026-06-28T09:54:13Z",
+      "pid": 10444,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 139,
+      "timestamp": "2026-06-28T10:07:26Z",
+      "pid": 10296,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 138,
+      "timestamp": "2026-06-28T09:41:16Z",
+      "pid": 10272,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 137,
+      "timestamp": "2026-06-28T09:40:10Z",
+      "pid": 10148,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 136,
+      "timestamp": "2026-06-28T10:09:47Z",
+      "pid": 9812,
+      "process_name": "sihost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\sihost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 135,
+      "timestamp": "2026-06-28T10:22:13Z",
+      "pid": 9292,
+      "process_name": "mc-fw-host.exe",
+      "parent_process": "mc-fw-host.exe",
+      "path": "C:\\Program Files\\McAfee\\wps\\1.40.161.1\\mc-fw-host.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 134,
+      "timestamp": "2026-06-28T09:47:44Z",
+      "pid": 9224,
+      "process_name": "AggregatorHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\AggregatorHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 133,
+      "timestamp": "2026-06-28T09:57:20Z",
+      "pid": 9152,
+      "process_name": "nvcontainer.exe",
+      "parent_process": "nvcontainer.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 132,
+      "timestamp": "2026-06-28T09:26:25Z",
+      "pid": 8844,
+      "process_name": "nvcontainer.exe",
+      "parent_process": "nvcontainer.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 131,
+      "timestamp": "2026-06-28T09:35:40Z",
+      "pid": 8816,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 130,
+      "timestamp": "2026-06-28T09:28:35Z",
+      "pid": 8804,
+      "process_name": "SearchHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 129,
+      "timestamp": "2026-06-28T10:06:40Z",
+      "pid": 8708,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 128,
+      "timestamp": "2026-06-28T10:16:26Z",
+      "pid": 8432,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 127,
+      "timestamp": "2026-06-28T10:10:46Z",
+      "pid": 8000,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 126,
+      "timestamp": "2026-06-28T09:50:33Z",
+      "pid": 7736,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 125,
+      "timestamp": "2026-06-28T09:56:03Z",
+      "pid": 7640,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 124,
+      "timestamp": "2026-06-28T10:16:10Z",
+      "pid": 7620,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.69\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 123,
+      "timestamp": "2026-06-28T09:58:46Z",
+      "pid": 7584,
+      "process_name": "OpenConsole.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\7e7950df89\\resources\\app\\node_modules\\node-pty\\build\\Release\\conpty\\OpenConsole.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 122,
+      "timestamp": "2026-06-28T09:46:32Z",
+      "pid": 7436,
+      "process_name": "conhost.exe",
+      "parent_process": "cmd.exe",
+      "path": "C:\\Windows\\System32\\conhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 121,
+      "timestamp": "2026-06-28T09:47:06Z",
+      "pid": 7332,
+      "process_name": "claude.exe",
+      "parent_process": "powershell.exe",
+      "path": "C:\\Users\\asus\\AppData\\Roaming\\npm\\node_modules\\@anthropic-ai\\claude-code\\bin\\claude.exe",
+      "risk_score": 4
+    },
+    {
+      "id": 120,
+      "timestamp": "2026-06-28T10:12:43Z",
+      "pid": 7324,
+      "process_name": "dllhost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\dllhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 119,
+      "timestamp": "2026-06-28T09:52:27Z",
+      "pid": 7200,
+      "process_name": "mc-extn-browserhost.exe",
+      "parent_process": "cmd.exe",
+      "path": "C:\\Program Files\\McAfee\\wps\\1.40.161.1\\extnhost\\mc-extn-browserhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 118,
+      "timestamp": "2026-06-28T10:00:15Z",
+      "pid": 7076,
+      "process_name": "WmiPrvSE.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 117,
+      "timestamp": "2026-06-28T10:02:32Z",
+      "pid": 6772,
+      "process_name": "OfficeClickToRun.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\OfficeClickToRun.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 116,
+      "timestamp": "2026-06-28T09:48:54Z",
+      "pid": 6708,
+      "process_name": "ipf_helper.exe",
+      "parent_process": "ipf_uf.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\ipf_cpu.inf_amd64_07e81e065fff923d\\ipf_helper.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 115,
+      "timestamp": "2026-06-28T09:38:18Z",
+      "pid": 6568,
+      "process_name": "NVIDIA Overlay.exe",
+      "parent_process": "NVIDIA Overlay.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA app\\CEF\\NVIDIA Overlay.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 114,
+      "timestamp": "2026-06-28T09:59:36Z",
+      "pid": 6376,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 113,
+      "timestamp": "2026-06-28T09:36:11Z",
+      "pid": 6252,
+      "process_name": "powershell.exe",
+      "parent_process": "claude.exe",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 112,
+      "timestamp": "2026-06-28T10:10:56Z",
+      "pid": 6020,
+      "process_name": "RuntimeBroker.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\RuntimeBroker.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 111,
+      "timestamp": "2026-06-28T09:59:28Z",
+      "pid": 5576,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 110,
+      "timestamp": "2026-06-28T10:00:21Z",
+      "pid": 5468,
+      "process_name": "wslservice.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Program Files\\WSL\\wslservice.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 109,
+      "timestamp": "2026-06-28T10:12:59Z",
+      "pid": 5316,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 108,
+      "timestamp": "2026-06-28T09:39:23Z",
+      "pid": 5236,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 107,
+      "timestamp": "2026-06-28T09:32:49Z",
+      "pid": 5212,
+      "process_name": "WMIRegistrationService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\mewmiprov.inf_amd64_d51901c26227fb29\\WMIRegistrationService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 106,
+      "timestamp": "2026-06-28T09:32:31Z",
+      "pid": 5200,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 105,
+      "timestamp": "2026-06-28T09:57:59Z",
+      "pid": 5176,
+      "process_name": "mongod.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Program Files\\MongoDB\\Server\\8.0\\bin\\mongod.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 104,
+      "timestamp": "2026-06-28T10:09:54Z",
+      "pid": 5144,
+      "process_name": "RtkAudUService64.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\realtekservice.inf_amd64_9b2689b4e3586127\\RtkAudUService64.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 103,
+      "timestamp": "2026-06-28T09:31:58Z",
+      "pid": 5136,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 102,
+      "timestamp": "2026-06-28T10:14:48Z",
+      "pid": 5128,
+      "process_name": "RstMwService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\iastorvd.inf_amd64_346bd04e375689ec\\RstMwService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 101,
+      "timestamp": "2026-06-28T09:36:48Z",
+      "pid": 5036,
+      "process_name": "mc-fw-host.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Program Files\\McAfee\\wps\\1.40.161.1\\mc-fw-host.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 100,
+      "timestamp": "2026-06-28T09:25:32Z",
+      "pid": 4984,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 99,
+      "timestamp": "2026-06-28T09:44:00Z",
+      "pid": 4976,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 98,
+      "timestamp": "2026-06-28T09:51:44Z",
+      "pid": 4968,
+      "process_name": "jhi_service.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\dal.inf_amd64_af50fdb80983f7bc\\jhi_service.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 97,
+      "timestamp": "2026-06-28T10:09:53Z",
+      "pid": 4952,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 96,
+      "timestamp": "2026-06-28T10:08:40Z",
+      "pid": 4928,
+      "process_name": "ipf_uf.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\ipf_cpu.inf_amd64_07e81e065fff923d\\ipf_uf.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 95,
+      "timestamp": "2026-06-28T10:24:48Z",
+      "pid": 4892,
+      "process_name": "IntelAudioService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\intcoed.inf_amd64_1af5af61f22f9a64\\AS\\IAS\\IntelAudioService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 94,
+      "timestamp": "2026-06-28T09:58:24Z",
+      "pid": 4876,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 93,
+      "timestamp": "2026-06-28T10:13:44Z",
+      "pid": 4796,
+      "process_name": "OneApp.IGCC.WinService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\igcc_dch.inf_amd64_8660e4d6e8832471\\OneApp.IGCC.WinService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 92,
+      "timestamp": "2026-06-28T09:49:37Z",
+      "pid": 4764,
+      "process_name": "ipfsvc.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\dtt_sw.inf_amd64_3ea1838906a8645a\\ipfsvc.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 91,
+      "timestamp": "2026-06-28T09:28:07Z",
+      "pid": 4728,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 90,
+      "timestamp": "2026-06-28T10:11:59Z",
+      "pid": 4712,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 89,
+      "timestamp": "2026-06-28T09:59:06Z",
+      "pid": 4696,
+      "process_name": "AsusProArtUpdateService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Program Files\\ASUS\\ProArt Creator Hub\\ProArtCreatorHubService\\AsusProArtUpdateService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 88,
+      "timestamp": "2026-06-28T10:20:24Z",
+      "pid": 4688,
+      "process_name": "AsusProArtService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Program Files\\ASUS\\ProArt Creator Hub\\ProArtCreatorHubService\\AsusProArtService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 87,
+      "timestamp": "2026-06-28T09:52:47Z",
+      "pid": 4680,
+      "process_name": "ELANFPService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\ELANFPService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 86,
+      "timestamp": "2026-06-28T09:30:41Z",
+      "pid": 4608,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 85,
+      "timestamp": "2026-06-28T09:26:02Z",
+      "pid": 4584,
+      "process_name": "NgcIso.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\NgcIso.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 84,
+      "timestamp": "2026-06-28T09:44:12Z",
+      "pid": 4528,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 83,
+      "timestamp": "2026-06-28T10:15:04Z",
+      "pid": 4492,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 82,
+      "timestamp": "2026-06-28T10:18:09Z",
+      "pid": 4428,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 81,
+      "timestamp": "2026-06-28T09:49:12Z",
+      "pid": 4224,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 80,
+      "timestamp": "2026-06-28T09:27:29Z",
+      "pid": 4192,
+      "process_name": "spoolsv.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\spoolsv.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 79,
+      "timestamp": "2026-06-28T09:46:01Z",
+      "pid": 4148,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 78,
+      "timestamp": "2026-06-28T09:45:05Z",
+      "pid": 4012,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 77,
+      "timestamp": "2026-06-28T10:20:33Z",
+      "pid": 3960,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 76,
+      "timestamp": "2026-06-28T09:33:22Z",
+      "pid": 3912,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 75,
+      "timestamp": "2026-06-28T09:54:52Z",
+      "pid": 3852,
+      "process_name": "SecurityHealthSystray.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\System32\\SecurityHealthSystray.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 74,
+      "timestamp": "2026-06-28T09:27:53Z",
+      "pid": 3844,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 73,
+      "timestamp": "2026-06-28T10:16:18Z",
+      "pid": 3828,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 72,
+      "timestamp": "2026-06-28T09:45:28Z",
+      "pid": 3816,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 71,
+      "timestamp": "2026-06-28T10:09:06Z",
+      "pid": 3692,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 70,
+      "timestamp": "2026-06-28T09:26:32Z",
+      "pid": 3560,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 69,
+      "timestamp": "2026-06-28T10:09:41Z",
+      "pid": 3544,
+      "process_name": "ShellHost.exe",
+      "parent_process": "sihost.exe",
+      "path": "C:\\Windows\\System32\\ShellHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 68,
+      "timestamp": "2026-06-28T10:06:03Z",
+      "pid": 3516,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 67,
+      "timestamp": "2026-06-28T09:46:57Z",
+      "pid": 3484,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 66,
+      "timestamp": "2026-06-28T09:26:57Z",
+      "pid": 3452,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 65,
+      "timestamp": "2026-06-28T09:52:47Z",
+      "pid": 3416,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 64,
+      "timestamp": "2026-06-28T10:20:32Z",
+      "pid": 3352,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 63,
+      "timestamp": "2026-06-28T09:27:18Z",
+      "pid": 3344,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 62,
+      "timestamp": "2026-06-28T09:51:47Z",
+      "pid": 3308,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 61,
+      "timestamp": "2026-06-28T09:45:49Z",
+      "pid": 3256,
+      "process_name": "MemCompression",
+      "parent_process": "System",
+      "path": "MemCompression",
+      "risk_score": 0
+    },
+    {
+      "id": 60,
+      "timestamp": "2026-06-28T10:04:14Z",
+      "pid": 3248,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 59,
+      "timestamp": "2026-06-28T10:00:06Z",
+      "pid": 3148,
+      "process_name": "SecurityHealthService.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\SecurityHealthService.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 58,
+      "timestamp": "2026-06-28T09:56:53Z",
+      "pid": 3136,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 57,
+      "timestamp": "2026-06-28T09:51:18Z",
+      "pid": 3128,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 56,
+      "timestamp": "2026-06-28T10:17:30Z",
+      "pid": 3120,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 55,
+      "timestamp": "2026-06-28T10:14:21Z",
+      "pid": 3092,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 54,
+      "timestamp": "2026-06-28T09:49:33Z",
+      "pid": 3020,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 53,
+      "timestamp": "2026-06-28T10:23:07Z",
+      "pid": 2936,
+      "process_name": "Widgets.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Program Files\\WindowsApps\\MicrosoftWindows.Client.WebExperience_526.15201.50.0_x64__cw5n1h2txyewy\\Dashboard\\Widgets.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 52,
+      "timestamp": "2026-06-28T09:37:36Z",
+      "pid": 2916,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 51,
+      "timestamp": "2026-06-28T10:09:22Z",
+      "pid": 2768,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 50,
+      "timestamp": "2026-06-28T09:29:17Z",
+      "pid": 2668,
+      "process_name": "backgroundTaskHost.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\backgroundTaskHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 49,
+      "timestamp": "2026-06-28T10:13:53Z",
+      "pid": 2584,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 48,
+      "timestamp": "2026-06-28T10:01:22Z",
+      "pid": 2444,
+      "process_name": "Code.exe",
+      "parent_process": "Code.exe",
+      "path": "C:\\Users\\asus\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 47,
+      "timestamp": "2026-06-28T09:45:52Z",
+      "pid": 2436,
+      "process_name": "WUDFHost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\WUDFHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 46,
+      "timestamp": "2026-06-28T10:08:36Z",
+      "pid": 2380,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.69\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 45,
+      "timestamp": "2026-06-28T09:50:25Z",
+      "pid": 2376,
+      "process_name": "RtkAudUService64.exe",
+      "parent_process": "svchost.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\realtekservice.inf_amd64_9b2689b4e3586127\\RtkAudUService64.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 44,
+      "timestamp": "2026-06-28T10:11:19Z",
+      "pid": 2348,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 43,
+      "timestamp": "2026-06-28T10:20:11Z",
+      "pid": 2336,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 42,
+      "timestamp": "2026-06-28T09:57:57Z",
+      "pid": 2292,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 41,
+      "timestamp": "2026-06-28T10:05:33Z",
+      "pid": 2264,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 40,
+      "timestamp": "2026-06-28T09:56:22Z",
+      "pid": 2220,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 39,
+      "timestamp": "2026-06-28T09:52:35Z",
+      "pid": 2216,
+      "process_name": "msedgewebview2.exe",
+      "parent_process": "msedgewebview2.exe",
+      "path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\149.0.4022.80\\msedgewebview2.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 38,
+      "timestamp": "2026-06-28T10:09:06Z",
+      "pid": 2200,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 37,
+      "timestamp": "2026-06-28T09:42:51Z",
+      "pid": 2192,
+      "process_name": "IntelCpHDCPSvc.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_ae1847f7359d4098\\IntelCpHDCPSvc.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 36,
+      "timestamp": "2026-06-28T10:06:13Z",
+      "pid": 2088,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 35,
+      "timestamp": "2026-06-28T10:17:18Z",
+      "pid": 2080,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 34,
+      "timestamp": "2026-06-28T09:55:34Z",
+      "pid": 2056,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 33,
+      "timestamp": "2026-06-28T09:32:59Z",
+      "pid": 1964,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 32,
+      "timestamp": "2026-06-28T09:28:44Z",
+      "pid": 1956,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 31,
+      "timestamp": "2026-06-28T09:50:23Z",
+      "pid": 1840,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 30,
+      "timestamp": "2026-06-28T10:11:12Z",
+      "pid": 1824,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 29,
+      "timestamp": "2026-06-28T10:22:12Z",
+      "pid": 1796,
+      "process_name": "SearchProtocolHost.exe",
+      "parent_process": "SearchIndexer.exe",
+      "path": "C:\\Windows\\System32\\SearchProtocolHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 28,
+      "timestamp": "2026-06-28T10:05:39Z",
+      "pid": 1780,
+      "process_name": "dwm.exe",
+      "parent_process": "winlogon.exe",
+      "path": "C:\\Windows\\System32\\dwm.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 27,
+      "timestamp": "2026-06-28T09:49:03Z",
+      "pid": 1768,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 26,
+      "timestamp": "2026-06-28T10:07:51Z",
+      "pid": 1696,
+      "process_name": "WUDFHost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\WUDFHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 25,
+      "timestamp": "2026-06-28T09:40:52Z",
+      "pid": 1640,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 24,
+      "timestamp": "2026-06-28T10:02:37Z",
+      "pid": 1636,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 23,
+      "timestamp": "2026-06-28T10:19:47Z",
+      "pid": 1588,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 22,
+      "timestamp": "2026-06-28T09:30:11Z",
+      "pid": 1500,
+      "process_name": "WUDFHost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\WUDFHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 21,
+      "timestamp": "2026-06-28T09:36:04Z",
+      "pid": 1460,
+      "process_name": "fontdrvhost.exe",
+      "parent_process": "wininit.exe",
+      "path": "C:\\Windows\\System32\\fontdrvhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 20,
+      "timestamp": "2026-06-28T09:51:24Z",
+      "pid": 1452,
+      "process_name": "fontdrvhost.exe",
+      "parent_process": "winlogon.exe",
+      "path": "C:\\Windows\\System32\\fontdrvhost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 19,
+      "timestamp": "2026-06-28T09:44:12Z",
+      "pid": 1440,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 18,
+      "timestamp": "2026-06-28T10:03:15Z",
+      "pid": 1424,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 17,
+      "timestamp": "2026-06-28T10:00:45Z",
+      "pid": 1288,
+      "process_name": "lsass.exe",
+      "parent_process": "wininit.exe",
+      "path": "C:\\Windows\\System32\\lsass.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 16,
+      "timestamp": "2026-06-28T10:18:40Z",
+      "pid": 1268,
+      "process_name": "LsaIso.exe",
+      "parent_process": "wininit.exe",
+      "path": "C:\\Windows\\System32\\LsaIso.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 15,
+      "timestamp": "2026-06-28T09:25:21Z",
+      "pid": 1236,
+      "process_name": "services.exe",
+      "parent_process": "wininit.exe",
+      "path": "C:\\Windows\\System32\\services.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 14,
+      "timestamp": "2026-06-28T10:00:25Z",
+      "pid": 1216,
+      "process_name": "winlogon.exe",
+      "parent_process": "nvcontainer.exe",
+      "path": "C:\\Windows\\System32\\winlogon.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 13,
+      "timestamp": "2026-06-28T09:51:55Z",
+      "pid": 1132,
+      "process_name": "WUDFHost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\WUDFHost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 12,
+      "timestamp": "2026-06-28T10:22:22Z",
+      "pid": 1128,
+      "process_name": "csrss.exe",
+      "parent_process": "nvcontainer.exe",
+      "path": "C:\\Windows\\System32\\csrss.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 11,
+      "timestamp": "2026-06-28T09:57:17Z",
+      "pid": 1120,
+      "process_name": "wininit.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\System32\\wininit.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 10,
+      "timestamp": "2026-06-28T09:40:04Z",
+      "pid": 1112,
+      "process_name": "nvcontainer.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Program Files\\NVIDIA Corporation\\NvContainer\\nvcontainer.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 9,
+      "timestamp": "2026-06-28T10:22:01Z",
+      "pid": 932,
+      "process_name": "chrome.exe",
+      "parent_process": "chrome.exe",
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 8,
+      "timestamp": "2026-06-28T10:05:19Z",
+      "pid": 884,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 7,
+      "timestamp": "2026-06-28T10:04:58Z",
+      "pid": 756,
+      "process_name": "smss.exe",
+      "parent_process": "System",
+      "path": "C:\\Windows\\System32\\smss.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 6,
+      "timestamp": "2026-06-28T10:15:54Z",
+      "pid": 736,
+      "process_name": "csrss.exe",
+      "parent_process": "",
+      "path": "C:\\Windows\\System32\\csrss.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-06-28T09:59:34Z",
+      "pid": 728,
+      "process_name": "svchost.exe",
+      "parent_process": "services.exe",
+      "path": "C:\\Windows\\System32\\svchost.exe",
+      "risk_score": 0
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-06-28T10:22:37Z",
+      "pid": 280,
+      "process_name": "Registry",
+      "parent_process": "System",
+      "path": "Registry",
+      "risk_score": 0
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-06-28T10:06:08Z",
+      "pid": 236,
+      "process_name": "unknown",
+      "parent_process": "System",
+      "path": "",
+      "risk_score": 0
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-06-28T09:43:25Z",
+      "pid": 4,
+      "process_name": "System",
+      "parent_process": "",
+      "path": "",
+      "risk_score": 0
+    },
+    {
+      "id": 1,
+      "timestamp": "2026-06-28T09:33:38Z",
+      "pid": 0,
+      "process_name": "System Idle Process",
+      "parent_process": "",
+      "path": "",
+      "risk_score": 0
+    }
+  ],
+  "network_events": [
+    {
+      "id": 48,
+      "timestamp": "2026-06-28T10:02:45Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "140.82.114.26",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 47,
+      "timestamp": "2026-06-28T10:08:41Z",
+      "process_name": "MEGAsync.exe",
+      "remote_ip": "2a0b:e46:1:101::135",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 46,
+      "timestamp": "2026-06-28T10:08:38Z",
+      "process_name": "SDXHelper.exe",
+      "remote_ip": "2603:1063:27:1::14",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 45,
+      "timestamp": "2026-06-28T09:54:56Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "162.159.130.234",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 44,
+      "timestamp": "2026-06-28T10:07:14Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "2606:4700:440b::6812:2715",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 43,
+      "timestamp": "2026-06-28T10:07:37Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "2606:4700::6812:1fad",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 42,
+      "timestamp": "2026-06-28T10:16:30Z",
+      "process_name": "pid:0",
+      "remote_ip": "216.150.16.193",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 41,
+      "timestamp": "2026-06-28T10:12:35Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "170.114.2.88",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 40,
+      "timestamp": "2026-06-28T10:13:17Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "2407:30c0:181::1",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 39,
+      "timestamp": "2026-06-28T10:22:45Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "20.57.85.160",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 38,
+      "timestamp": "2026-06-28T10:18:37Z",
+      "process_name": "pid:0",
+      "remote_ip": "2606:4700:10::ac42:8c49",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 37,
+      "timestamp": "2026-06-28T10:19:26Z",
+      "process_name": "pid:0",
+      "remote_ip": "2400:52e0:1500::1272:1",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 36,
+      "timestamp": "2026-06-28T10:08:20Z",
+      "process_name": "msedgewebview2.exe",
+      "remote_ip": "2620:1ec:46::254",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 35,
+      "timestamp": "2026-06-28T10:12:46Z",
+      "process_name": "codex.exe",
+      "remote_ip": "2606:4700:4408::ac40:9bd1",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 34,
+      "timestamp": "2026-06-28T10:12:02Z",
+      "process_name": "MEGAsync.exe",
+      "remote_ip": "2a0b:e46:1:100::13",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 33,
+      "timestamp": "2026-06-28T10:17:13Z",
+      "process_name": "msedgewebview2.exe",
+      "remote_ip": "2603:1020:1204:4::41e",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 32,
+      "timestamp": "2026-06-28T10:11:21Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "2600:1901:1:292::",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 31,
+      "timestamp": "2026-06-28T10:13:28Z",
+      "process_name": "svchost.exe",
+      "remote_ip": "2603:1040:a06:6::1",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 30,
+      "timestamp": "2026-06-28T10:00:58Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "98.86.28.11",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 29,
+      "timestamp": "2026-06-28T10:11:54Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "170.114.52.83",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 28,
+      "timestamp": "2026-06-28T10:17:37Z",
+      "process_name": "Code.exe",
+      "remote_ip": "13.67.9.5",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 27,
+      "timestamp": "2026-06-28T09:56:41Z",
+      "process_name": "pid:0",
+      "remote_ip": "20.204.245.84",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 26,
+      "timestamp": "2026-06-28T10:18:41Z",
+      "process_name": "python.exe",
+      "remote_ip": "100.31.173.133",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 25,
+      "timestamp": "2026-06-28T10:05:59Z",
+      "process_name": "pid:0",
+      "remote_ip": "2606:4700:4408::ac40:9bd1",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 24,
+      "timestamp": "2026-06-28T10:00:06Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "134.224.240.221",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 23,
+      "timestamp": "2026-06-28T09:58:37Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "170.114.52.146",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 22,
+      "timestamp": "2026-06-28T10:04:20Z",
+      "process_name": "Code.exe",
+      "remote_ip": "20.42.73.24",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 21,
+      "timestamp": "2026-06-28T10:07:28Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "216.150.16.193",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 20,
+      "timestamp": "2026-06-28T10:23:12Z",
+      "process_name": "Telegram.exe",
+      "remote_ip": "91.108.56.123",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 19,
+      "timestamp": "2026-06-28T10:07:02Z",
+      "process_name": "Code.exe",
+      "remote_ip": "140.82.112.22",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 18,
+      "timestamp": "2026-06-28T10:23:39Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "18.97.36.54",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 17,
+      "timestamp": "2026-06-28T10:11:40Z",
+      "process_name": "pid:0",
+      "remote_ip": "2606:4700::6812:1fad",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 16,
+      "timestamp": "2026-06-28T10:05:54Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "34.218.171.104",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 15,
+      "timestamp": "2026-06-28T10:17:09Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "170.114.45.1",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 14,
+      "timestamp": "2026-06-28T10:22:58Z",
+      "process_name": "obs64.exe",
+      "remote_ip": "2001:41d0:26c:6f00:913e:6226:cfb3:680e",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 13,
+      "timestamp": "2026-06-28T10:12:53Z",
+      "process_name": "pid:0",
+      "remote_ip": "2606:4700:10::6814:1e7c",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 12,
+      "timestamp": "2026-06-28T09:59:44Z",
+      "process_name": "servicehost.exe",
+      "remote_ip": "2406:7400:9::173e:c21",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 11,
+      "timestamp": "2026-06-28T10:06:09Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "170.114.52.4",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 10,
+      "timestamp": "2026-06-28T10:23:07Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "18.226.241.237",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 9,
+      "timestamp": "2026-06-28T10:19:32Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "2404:6800:4003:c04::bc",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 8,
+      "timestamp": "2026-06-28T10:17:40Z",
+      "process_name": "mc-fw-host.exe",
+      "remote_ip": "3.111.241.224",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 7,
+      "timestamp": "2026-06-28T09:55:39Z",
+      "process_name": "claude.exe",
+      "remote_ip": "2607:6bc0::10",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 6,
+      "timestamp": "2026-06-28T10:10:28Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "170.114.46.1",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-06-28T10:13:19Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "2404:6800:4003:c11::bc",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-06-28T09:57:24Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "2600:1417:73::17d9:3482",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-06-28T10:00:50Z",
+      "process_name": "chrome.exe",
+      "remote_ip": "13.207.83.9",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-06-28T10:15:16Z",
+      "process_name": "msedgewebview2.exe",
+      "remote_ip": "204.79.197.222",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    },
+    {
+      "id": 1,
+      "timestamp": "2026-06-28T10:05:01Z",
+      "process_name": "Zoom.exe",
+      "remote_ip": "52.84.151.14",
+      "remote_domain": "",
+      "country": "?",
+      "risk_score": 0
+    }
+  ],
+  "system_events": [],
+  "threat_intelligence": [
+    {
+      "threat_name": "DarkGate Loader with Keylogger Module",
+      "ioc_domains": [
+        "darkgate-panel.ru"
+      ],
+      "ioc_hashes": [
+        "e3f6a9b2c5d8e1f4a7b0c3d6e9f2a5b8"
+      ],
+      "behaviors": [
+        "keylogging",
+        "remote desktop",
+        "cryptocurrency mining",
+        "malicious messenger"
+      ],
+      "severity": "HIGH",
+      "source": "sekoia.io",
+      "published_at": "2026-06-20",
+      "ingested_at": "2026-06-28T10:24:54Z"
+    },
+    {
+      "threat_name": "Emotet Epoch 5 OneNote Loader",
+      "ioc_domains": [
+        "emotet-cdn.ru"
+      ],
+      "ioc_hashes": [
+        "a7b0c3d6e9f2a5b8c1d4e7f0a3b6c9d2"
+      ],
+      "behaviors": [
+        "malicious onenote",
+        "dll sideloading",
+        "banking trojan",
+        "registry persistence"
+      ],
+      "severity": "HIGH",
+      "source": "thedfirreport.com",
+      "published_at": "2026-06-12",
+      "ingested_at": "2026-06-28T10:24:54Z"
+    },
+    {
+      "threat_name": "Akira Ransomware VPN Exploitation",
+      "ioc_domains": [
+        "akira-files.onion"
+      ],
+      "ioc_hashes": [
+        "d8e1f4a7b0c3d6e9f2a5b8c1d4e7f0a3"
+      ],
+      "behaviors": [
+        "vpn exploitation",
+        "credential dumping",
+        "file encryption",
+        "double extortion"
+      ],
+      "severity": "CRITICAL",
+      "source": "bleepingcomputer.com",
+      "published_at": "2026-06-17",
+      "ingested_at": "2026-06-28T10:24:54Z"
+    },
+    {
+      "threat_name": "Cobalt Strike Financial Sector Campaign",
+      "ioc_domains": [
+        "cobalt-c2.hacker.io"
+      ],
+      "ioc_hashes": [
+        "c5d8e1f4a7b0c3d6e9f2a5b8c1d4e7f0"
+      ],
+      "behaviors": [
+        "command-and-control",
+        "spear phishing",
+        "process injection",
+        "c2 beacon"
+      ],
+      "severity": "CRITICAL",
+      "source": "proofpoint.com",
+      "published_at": "2026-06-18",
+      "ingested_at": "2026-06-28T10:24:54Z"
+    },
+    {
+      "threat_name": "APT29 Midnight Blizzard OAuth Abuse",
+      "ioc_domains": [
+        "oauth-consent.malicious.net"
+      ],
+      "ioc_hashes": [],
+      "behaviors": [
+        "oauth token theft",
+        "spear phishing",
+        "data exfiltration",
+        "m365 compromise"
+      ],
+      "severity": "HIGH",
+      "source": "microsoft.com",
+      "published_at": "2026-06-08",
+      "ingested_at": "2026-06-28T10:24:54Z"
+    },
+    {
+      "threat_name": "BlackCat / ALPHV Sphynx Ransomware",
+      "ioc_domains": [
+        "alphv-files.onion"
+      ],
+      "ioc_hashes": [
+        "c1d4a7f0b3e6c9d2a5f8b1e4c7a0d3f6"
+      ],
+      "behaviors": [
+        "file encryption",
+        "shadow copy deletion",
+        "intermittent encryption",
+        "data exfiltration"
+      ],
+      "severity": "CRITICAL",
+      "source": "cisa.gov",
+      "published_at": "2026-06-10",
+      "ingested_at": "2026-06-28T10:24:54Z"
+    },
+    {
+      "threat_name": "CVE-2026-0185 Print Spooler Exploitation",
+      "ioc_domains": [],
+      "ioc_hashes": [
+        "f2a5b8c1d4e7f0a3b6c9d2e5f8a1b4c7"
+      ],
+      "behaviors": [
+        "privilege escalation",
+        "dll injection",
+        "spooler exploit",
+        "lateral movement"
+      ],
+      "severity": "CRITICAL",
+      "source": "cisa.gov",
+      "published_at": "2026-06-01",
+      "ingested_at": "2026-06-28T10:24:54Z"
+    },
+    {
+      "threat_name": "Snake Keylogger .NET variant",
+      "ioc_domains": [
+        "snake-panel.ru",
+        "snakelog.pw"
+      ],
+      "ioc_hashes": [
+        "e7f0a3b6c9d2e5f8a1b4c7d0e3f6a9b2",
+        "f6a9b2c5d8e1f4a7b0c3d6e9f2a5b8c1"
+      ],
+      "behaviors": [
+        "keylogging",
+        "clipboard hijacking",
+        "browser credential theft",
+        "email client credential theft",
+        "ftp credential theft"
+      ],
+      "severity": "HIGH",
+      "source": "fortinet.com",
+      "published_at": "2026-06-19",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "Akira Ransomware Gang",
+      "ioc_domains": [
+        "akira-files.onion"
+      ],
+      "ioc_hashes": [
+        "d8e1f4a7b0c3d6e9f2a5b8c1d4e7f0a3"
+      ],
+      "behaviors": [
+        "file encryption",
+        "credential dumping",
+        "vpn exploitation",
+        "data exfiltration",
+        "double extortion",
+        "shadow copy deletion"
+      ],
+      "severity": "CRITICAL",
+      "source": "bleepingcomputer.com",
+      "published_at": "2026-06-17",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "AsyncRAT Campaign via Malspam",
+      "ioc_domains": [
+        "asyncrat-c2.ru",
+        "malspam-host.net"
+      ],
+      "ioc_hashes": [
+        "c9d2e5f8a1b4c7d0e3f6a9b2c5d8e1f4"
+      ],
+      "behaviors": [
+        "remote access trojan",
+        "keylogging",
+        "screen capture",
+        "download executable",
+        "registry persistence",
+        "powershell execution"
+      ],
+      "severity": "HIGH",
+      "source": "any.run",
+      "published_at": "2026-06-22",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "XMRig Cryptominer via Log4Shell",
+      "ioc_domains": [
+        "xmr-pool.attack.ru",
+        "mine-now.online"
+      ],
+      "ioc_hashes": [
+        "a1b4c7d0e3f6a9b2c5d8e1f4a7b0c3d6",
+        "b0c3d6e9f2a5b8c1d4e7f0a3b6c9d2e5"
+      ],
+      "behaviors": [
+        "log4shell exploitation",
+        "cryptocurrency mining",
+        "cpu abuse",
+        "download executable",
+        "persistence via cron"
+      ],
+      "severity": "MEDIUM",
+      "source": "greynoise.io",
+      "published_at": "2026-05-28",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "Scattered Spider (0ktapus reloaded)",
+      "ioc_domains": [
+        "okta-sso-help.com",
+        "identity-verify.net",
+        "okta-login.pw"
+      ],
+      "ioc_hashes": [],
+      "behaviors": [
+        "sim swapping",
+        "vishing",
+        "mfa bypass",
+        "oauth token theft",
+        "data exfiltration",
+        "cloud credential theft"
+      ],
+      "severity": "HIGH",
+      "source": "mandiant.com",
+      "published_at": "2026-06-14",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "CVE-2026-0185 PrintNightmare variant",
+      "ioc_domains": [],
+      "ioc_hashes": [
+        "f2a5b8c1d4e7f0a3b6c9d2e5f8a1b4c7"
+      ],
+      "behaviors": [
+        "privilege escalation",
+        "dll injection",
+        "spooler exploit",
+        "lateral movement",
+        "domain controller compromise"
+      ],
+      "severity": "CRITICAL",
+      "source": "nist.gov",
+      "published_at": "2026-06-01",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "DarkGate Loader",
+      "ioc_domains": [
+        "darkgate-panel.ru",
+        "dg-load.net"
+      ],
+      "ioc_hashes": [
+        "e3f6a9b2c5d8e1f4a7b0c3d6e9f2a5b8"
+      ],
+      "behaviors": [
+        "download executable",
+        "keylogging",
+        "remote access trojan",
+        "cryptocurrency mining",
+        "clipboard hijacking"
+      ],
+      "severity": "HIGH",
+      "source": "sekoia.io",
+      "published_at": "2026-06-20",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "Cobalt Strike Beacon (unknown TA)",
+      "ioc_domains": [
+        "cobalt-c2.hacker.io",
+        "csbeacon.online",
+        "team-server.pw"
+      ],
+      "ioc_hashes": [
+        "c5d8e1f4a7b0c3d6e9f2a5b8c1d4e7f0",
+        "d4e7f0a3b6c9d2e5f8a1b4c7d0e3f6a9"
+      ],
+      "behaviors": [
+        "command-and-control",
+        "process injection",
+        "lateral movement",
+        "credential dumping",
+        "beacon",
+        "named pipe communication"
+      ],
+      "severity": "CRITICAL",
+      "source": "proofpoint.com",
+      "published_at": "2026-06-18",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "Emotet Epoch 5 Wave",
+      "ioc_domains": [
+        "emotet-cdn.ru",
+        "update-office.xyz",
+        "macro-cdn.net"
+      ],
+      "ioc_hashes": [
+        "a7b0c3d6e9f2a5b8c1d4e7f0a3b6c9d2",
+        "b6c9d2e5f8a1b4c7d0e3f6a9b2c5d8e1"
+      ],
+      "behaviors": [
+        "malicious macro",
+        "powershell execution",
+        "download executable",
+        "spam propagation",
+        "banking trojan",
+        "registry persistence"
+      ],
+      "severity": "HIGH",
+      "source": "thedfirreport.com",
+      "published_at": "2026-06-12",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "APT29 Midnight Blizzard",
+      "ioc_domains": [
+        "beacon.apt29.ru",
+        "office365-auth.net",
+        "ms-update.pw"
+      ],
+      "ioc_hashes": [
+        "e9f2c5b8a1d4e7f0c3b6a9d2e5f8b1c4",
+        "f8a1d4e7b0c3f6a9d2e5b8c1f4a7d0e3"
+      ],
+      "behaviors": [
+        "spear phishing",
+        "oauth token theft",
+        "command-and-control beacon",
+        "process injection",
+        "dll sideloading",
+        "living off the land"
+      ],
+      "severity": "HIGH",
+      "source": "microsoft.com/security",
+      "published_at": "2026-06-08",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "BlackCat / ALPHV Ransomware",
+      "ioc_domains": [
+        "alphv-files.onion",
+        "blackcat-panel.ru"
+      ],
+      "ioc_hashes": [
+        "c1d4a7f0b3e6c9d2a5f8b1e4c7a0d3f6",
+        "d0e3b6a9c2f5d8a1e4b7c0f3a6d9b2e5"
+      ],
+      "behaviors": [
+        "file encryption",
+        "shadow copy deletion",
+        "registry persistence",
+        "lateral movement",
+        "double extortion",
+        "data exfiltration"
+      ],
+      "severity": "CRITICAL",
+      "source": "cisa.gov",
+      "published_at": "2026-06-10",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    },
+    {
+      "threat_name": "LummaC2 Stealer Campaign",
+      "ioc_domains": [
+        "lumma-update.com",
+        "lummabots.net",
+        "stealer-panel.pw"
+      ],
+      "ioc_hashes": [
+        "a3f5c8e1d2b7a4f0c9e3d6b8a1f4c7e0",
+        "b2e4d7a0c3f6b9e2d5a8c1f4b7e0a3d6"
+      ],
+      "behaviors": [
+        "browser credential theft",
+        "clipboard hijacking",
+        "crypto wallet scraping",
+        "download executable",
+        "c2 communication"
+      ],
+      "severity": "CRITICAL",
+      "source": "bleepingcomputer.com",
+      "published_at": "2026-06-15",
+      "ingested_at": "2026-06-28T10:24:50Z"
+    }
+  ],
+  "incidents": [
+    {
+      "id": 8,
+      "incident_id": "INC-LIVE-008",
+      "timestamp": "2026-06-28T10:24:50Z",
+      "summary": "Zoom.exe (pid 34672) → 170.114.52.83:443 (?) — suspicious path",
+      "confidence": 0.65,
+      "prediction": "Zoom.exe is making suspicious external connections to ?. Monitor for data exfiltration or C2 communication.",
+      "severity": "HIGH",
+      "resolved": 0
+    },
+    {
+      "id": 7,
+      "incident_id": "INC-LIVE-007",
+      "timestamp": "2026-06-28T10:24:50Z",
+      "summary": "Zoom.exe (pid 41240) → 134.224.240.221:443 (?) — suspicious path",
+      "confidence": 0.65,
+      "prediction": "Zoom.exe is making suspicious external connections to ?. Monitor for data exfiltration or C2 communication.",
+      "severity": "HIGH",
+      "resolved": 0
+    },
+    {
+      "id": 6,
+      "incident_id": "INC-LIVE-006",
+      "timestamp": "2026-06-28T10:24:50Z",
+      "summary": "Zoom.exe (pid 41240) → 170.114.52.146:443 (?) — suspicious path",
+      "confidence": 0.65,
+      "prediction": "Zoom.exe is making suspicious external connections to ?. Monitor for data exfiltration or C2 communication.",
+      "severity": "HIGH",
+      "resolved": 0
+    },
+    {
+      "id": 5,
+      "incident_id": "INC-LIVE-005",
+      "timestamp": "2026-06-28T10:24:50Z",
+      "summary": "Zoom.exe (pid 41240) → 170.114.45.1:443 (?) — suspicious path",
+      "confidence": 0.65,
+      "prediction": "Zoom.exe is making suspicious external connections to ?. Monitor for data exfiltration or C2 communication.",
+      "severity": "HIGH",
+      "resolved": 0
+    },
+    {
+      "id": 4,
+      "incident_id": "INC-LIVE-004",
+      "timestamp": "2026-06-28T10:24:50Z",
+      "summary": "Zoom.exe (pid 41240) → 170.114.52.4:443 (?) — suspicious path",
+      "confidence": 0.65,
+      "prediction": "Zoom.exe is making suspicious external connections to ?. Monitor for data exfiltration or C2 communication.",
+      "severity": "HIGH",
+      "resolved": 0
+    },
+    {
+      "id": 3,
+      "incident_id": "INC-LIVE-003",
+      "timestamp": "2026-06-28T10:24:50Z",
+      "summary": "claude.exe (pid 7332) → 2607:6bc0::10:443 (?) — suspicious path",
+      "confidence": 0.65,
+      "prediction": "claude.exe is making suspicious external connections to ?. Monitor for data exfiltration or C2 communication.",
+      "severity": "HIGH",
+      "resolved": 0
+    },
+    {
+      "id": 2,
+      "incident_id": "INC-LIVE-002",
+      "timestamp": "2026-06-28T10:24:50Z",
+      "summary": "Zoom.exe (pid 41240) → 170.114.46.1:443 (?) — suspicious path",
+      "confidence": 0.65,
+      "prediction": "Zoom.exe is making suspicious external connections to ?. Monitor for data exfiltration or C2 communication.",
+      "severity": "HIGH",
+      "resolved": 0
+    },
+    {
+      "id": 1,
+      "incident_id": "INC-LIVE-001",
+      "timestamp": "2026-06-28T10:24:50Z",
+      "summary": "Zoom.exe (pid 41240) → 52.84.151.14:443 (?) — suspicious path",
+      "confidence": 0.65,
+      "prediction": "Zoom.exe is making suspicious external connections to ?. Monitor for data exfiltration or C2 communication.",
+      "severity": "HIGH",
+      "resolved": 0
+    }
+  ],
+  "predictions": [],
+  "anakin_scraping": {
+    "raw_search_results": [
+      {
+        "title": "CISA Advisory: Active exploitation of CVE-2026-0185 in the wild",
+        "url": "https://www.cisa.gov/advisories/2026/aa26-001",
+        "snippet": "CISA warns of active exploitation of a critical Windows Print Spooler vulnerability (CVE-2026-0185). Threat actors are leveraging this flaw for privilege escalation and lateral movement inside enterprise networks.",
+        "date": "2026-06-01",
+        "source": "cisa.gov"
+      },
+      {
+        "title": "LummaC2 Stealer targets crypto wallets via fake CAPTCHA pages",
+        "url": "https://www.bleepingcomputer.com/news/security/lummac2-captcha/",
+        "snippet": "LummaC2 infostealer is being distributed through fake CAPTCHA verification pages hosted on compromised WordPress sites. The malware steals browser credentials, crypto wallets, and FTP/VPN credentials.",
+        "date": "2026-06-15",
+        "source": "bleepingcomputer.com"
+      },
+      {
+        "title": "BlackCat ALPHV ransomware adopts new Sphynx encryptor",
+        "url": "https://www.cisa.gov/advisories/2026/blackcat-sphynx",
+        "snippet": "The BlackCat (ALPHV) ransomware group has updated their encryptor (Sphynx) with improved evasion. They now delete shadow copies via vssadmin and use intermittent encryption to evade behavior-based detection.",
+        "date": "2026-06-10",
+        "source": "cisa.gov"
+      },
+      {
+        "title": "APT29 Midnight Blizzard: OAuth abuse against Microsoft 365",
+        "url": "https://www.microsoft.com/security/blog/2026/06/apt29-m365",
+        "snippet": "Microsoft Threat Intelligence reports APT29 is abusing OAuth application consent phishing to gain persistent access to M365 environments. They register rogue apps and use them for long-term espionage and data theft.",
+        "date": "2026-06-08",
+        "source": "microsoft.com"
+      },
+      {
+        "title": "Cobalt Strike beacon identified in new campaign against financial sector",
+        "url": "https://www.proofpoint.com/us/blog/threat-insight/cobalt-strike-2026",
+        "snippet": "Proofpoint researchers identified a new Cobalt Strike campaign targeting financial institutions via spear-phishing. The malleable C2 profile mimics legitimate Microsoft traffic to evade detection.",
+        "date": "2026-06-18",
+        "source": "proofpoint.com"
+      },
+      {
+        "title": "Akira ransomware exploits VPN appliances for initial access",
+        "url": "https://www.bleepingcomputer.com/news/security/akira-vpn-2026/",
+        "snippet": "Akira ransomware group has been exploiting unpatched Cisco ASA/FTD VPN vulnerabilities for initial access, then deploying their encryptor after stealing data. Over 30 organisations hit in May–June 2026.",
+        "date": "2026-06-17",
+        "source": "bleepingcomputer.com"
+      },
+      {
+        "title": "Emotet returns with Epoch 5: OneNote lures and direct DLL loads",
+        "url": "https://thedfirreport.com/2026/06/emotet-epoch5/",
+        "snippet": "Emotet has returned with Epoch 5 infrastructure, using OneNote files with embedded DLL loaders to bypass macro policies. Once active, it downloads banking trojans and provides access to ransomware groups.",
+        "date": "2026-06-12",
+        "source": "thedfirreport.com"
+      },
+      {
+        "title": "DarkGate loader now includes keylogger and crypto miner modules",
+        "url": "https://sekoia.io/blog/darkgate-2026/",
+        "snippet": "DarkGate malware loader has been updated with a keylogger module, remote desktop capability, and an embedded XMRig cryptocurrency miner. Distributed via malicious Skype and Teams messages.",
+        "date": "2026-06-20",
+        "source": "sekoia.io"
+      }
+    ],
+    "extracted_campaigns": [
+      {
+        "threat_name": "CVE-2026-0185 Print Spooler Exploitation",
+        "ioc_domains": [],
+        "ioc_hashes": [
+          "f2a5b8c1d4e7f0a3b6c9d2e5f8a1b4c7"
+        ],
+        "behaviors": [
+          "privilege escalation",
+          "dll injection",
+          "spooler exploit",
+          "lateral movement"
+        ],
+        "severity": "CRITICAL",
+        "source": "cisa.gov",
+        "published_at": "2026-06-01"
+      },
+      {
+        "threat_name": "LummaC2 Stealer Campaign",
+        "ioc_domains": [
+          "lumma-update.com",
+          "captcha-verify.pw"
+        ],
+        "ioc_hashes": [
+          "a3f5c8e1d2b7a4f0c9e3d6b8a1f4c7e0"
+        ],
+        "behaviors": [
+          "browser credential theft",
+          "crypto wallet scraping",
+          "clipboard hijacking",
+          "c2 communication"
+        ],
+        "severity": "CRITICAL",
+        "source": "bleepingcomputer.com",
+        "published_at": "2026-06-15"
+      },
+      {
+        "threat_name": "BlackCat / ALPHV Sphynx Ransomware",
+        "ioc_domains": [
+          "alphv-files.onion"
+        ],
+        "ioc_hashes": [
+          "c1d4a7f0b3e6c9d2a5f8b1e4c7a0d3f6"
+        ],
+        "behaviors": [
+          "file encryption",
+          "shadow copy deletion",
+          "intermittent encryption",
+          "data exfiltration"
+        ],
+        "severity": "CRITICAL",
+        "source": "cisa.gov",
+        "published_at": "2026-06-10"
+      },
+      {
+        "threat_name": "APT29 Midnight Blizzard OAuth Abuse",
+        "ioc_domains": [
+          "oauth-consent.malicious.net"
+        ],
+        "ioc_hashes": [],
+        "behaviors": [
+          "oauth token theft",
+          "spear phishing",
+          "data exfiltration",
+          "m365 compromise"
+        ],
+        "severity": "HIGH",
+        "source": "microsoft.com",
+        "published_at": "2026-06-08"
+      },
+      {
+        "threat_name": "Cobalt Strike Financial Sector Campaign",
+        "ioc_domains": [
+          "cobalt-c2.hacker.io"
+        ],
+        "ioc_hashes": [
+          "c5d8e1f4a7b0c3d6e9f2a5b8c1d4e7f0"
+        ],
+        "behaviors": [
+          "command-and-control",
+          "spear phishing",
+          "process injection",
+          "c2 beacon"
+        ],
+        "severity": "CRITICAL",
+        "source": "proofpoint.com",
+        "published_at": "2026-06-18"
+      },
+      {
+        "threat_name": "Akira Ransomware VPN Exploitation",
+        "ioc_domains": [
+          "akira-files.onion"
+        ],
+        "ioc_hashes": [
+          "d8e1f4a7b0c3d6e9f2a5b8c1d4e7f0a3"
+        ],
+        "behaviors": [
+          "vpn exploitation",
+          "credential dumping",
+          "file encryption",
+          "double extortion"
+        ],
+        "severity": "CRITICAL",
+        "source": "bleepingcomputer.com",
+        "published_at": "2026-06-17"
+      },
+      {
+        "threat_name": "Emotet Epoch 5 OneNote Loader",
+        "ioc_domains": [
+          "emotet-cdn.ru"
+        ],
+        "ioc_hashes": [
+          "a7b0c3d6e9f2a5b8c1d4e7f0a3b6c9d2"
+        ],
+        "behaviors": [
+          "malicious onenote",
+          "dll sideloading",
+          "banking trojan",
+          "registry persistence"
+        ],
+        "severity": "HIGH",
+        "source": "thedfirreport.com",
+        "published_at": "2026-06-12"
+      },
+      {
+        "threat_name": "DarkGate Loader with Keylogger Module",
+        "ioc_domains": [
+          "darkgate-panel.ru"
+        ],
+        "ioc_hashes": [
+          "e3f6a9b2c5d8e1f4a7b0c3d6e9f2a5b8"
+        ],
+        "behaviors": [
+          "keylogging",
+          "remote desktop",
+          "cryptocurrency mining",
+          "malicious messenger"
+        ],
+        "severity": "HIGH",
+        "source": "sekoia.io",
+        "published_at": "2026-06-20"
+      }
+    ],
+    "newly_stored": 7
+  }
+}
