@@ -219,3 +219,8 @@ __marimo__/
 .claude/
 
 clawnet.egg-info/
+headsup.egg-info/
+
+# HeadsUp local threat memory + secrets
+.headsup/
+.env

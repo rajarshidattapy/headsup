@@ -22,6 +22,32 @@ It acts like a personal security analyst that never sleeps and never forgets.
 
 ---
 
+## Quickstart
+
+```bash
+pip install -e .            # or: pip install psutil rich watchdog openai requests send2trash
+cp .env.example .env        # optional — add CEREBRAS_API_KEY / ANAKIN_API_KEY if you have them
+
+headsup                     # live threat-memory dashboard (Rich TUI)
+headsup --copilot           # natural-language AI security copilot
+headsup --resolve           # dashboard with reverse-DNS on remote IPs
+headsup timeline 20         # print the recent memory timeline and exit
+headsup intel               # ingest + list the latest threat intelligence
+```
+
+HeadsUp runs **fully offline** with sensible fallbacks — no API keys required:
+
+| Capability | With keys | Without keys |
+|---|---|---|
+| Threat memory (HydraDB) | Hydra/Postgres via `HYDRA_URL` | local SQLite at `~/.headsup/headsup.db` |
+| AI reasoning | Gemma 4 on Cerebras (`CEREBRAS_API_KEY`) → OpenAI fallback | deterministic heuristics |
+| Threat intel (Anakin) | live web feeds (`ANAKIN_API_KEY`) | bundled sample campaign feed |
+
+> Run the terminal **as Administrator** for full process/connection visibility and
+> remediation actions (kill / block / quarantine).
+
+---
+
 ## Why HeadsUp?
 
 Most security tools answer:

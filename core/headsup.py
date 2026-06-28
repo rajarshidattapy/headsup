@@ -452,9 +452,10 @@ def _run_chat_command(state, db, engine, analyst, anakin, msg: str) -> str:
     if cmd == "summary":
         return analyst.summarize(db.timeline(40))
     if cmd == "predict":
-        chain = [ev["summary"] for ev in db.timeline(20) if (ev.get("risk_score", 0) or 0) >= 2]
+        chain = [f"{ev['kind']}: {ev['summary']}" for ev in db.timeline(20)
+                 if (ev.get("risk_score", 0) or 0) >= 2]
         if not chain:
-            chain = [ev["summary"] for ev in db.timeline(8)]
+            chain = [f"{ev['kind']}: {ev['summary']}" for ev in db.timeline(8)]
         return analyst.predict(chain[:6])
     if cmd == "intel":
         lines = ["Latest threat intelligence:"]
