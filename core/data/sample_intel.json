@@ -1,0 +1,47 @@
+[
+  {
+    "threat_name": "Lumma Stealer",
+    "ioc_domains": ["lummac.io", "steam-community-cdn.top", "gapi-node.io"],
+    "ioc_hashes": ["a7f3c9e1b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0d2f4a6"],
+    "behaviors": ["downloaded executable", "registry persistence", "browser credential theft", "foreign network connection", "data exfiltration"],
+    "severity": "HIGH",
+    "source": "The Hacker News",
+    "published_at": "2026-06-20"
+  },
+  {
+    "threat_name": "RedLine Stealer",
+    "ioc_domains": ["redline-panel.su", "telemetry-sync.click"],
+    "ioc_hashes": ["b8e4d0f2a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0"],
+    "behaviors": ["process injection", "browser credential theft", "clipboard hijacking", "foreign network connection"],
+    "severity": "HIGH",
+    "source": "BleepingComputer",
+    "published_at": "2026-06-18"
+  },
+  {
+    "threat_name": "AsyncRAT",
+    "ioc_domains": ["asyncrat-c2.duckdns.org", "nightowl-rat.ddns.net"],
+    "ioc_hashes": ["c9f5e1a3b7d9f1c3e5a7b9d1f3c5e7a9b1d3f5c7e9a1b3d5f7c9e1a3b5d7f9c1"],
+    "behaviors": ["startup persistence", "remote access", "keylogging", "foreign network connection", "high-risk port"],
+    "severity": "CRITICAL",
+    "source": "CISA",
+    "published_at": "2026-06-15"
+  },
+  {
+    "threat_name": "SocGholish (FakeUpdates)",
+    "ioc_domains": ["browser-update-now.com", "chrome-secure-update.net"],
+    "ioc_hashes": ["d0a6f2b4c8e0a2f4b6d8a0c2e4f6b8d0a2c4e6f8b0d2a4c6e8f0b2d4a6c8e0f2"],
+    "behaviors": ["downloaded executable", "fake browser update", "powershell execution", "foreign network connection"],
+    "severity": "HIGH",
+    "source": "Microsoft Security Blog",
+    "published_at": "2026-06-12"
+  },
+  {
+    "threat_name": "Akira Ransomware",
+    "ioc_domains": ["akira-leaks.onion", "akira-payment.top"],
+    "ioc_hashes": ["e1b7a3c5d9f1b3a5c7e9d1f3b5a7c9e1d3f5b7a9c1e3d5f7b9a1c3e5d7f9b1a3"],
+    "behaviors": ["file encryption", "shadow copy deletion", "lateral movement", "registry persistence", "data exfiltration"],
+    "severity": "CRITICAL",
+    "source": "CVE / CISA",
+    "published_at": "2026-06-08"
+  }
+]

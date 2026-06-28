@@ -3,26 +3,28 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "clawnet"
-version = "3.0.0"
-description = "AI-Powered Interactive Security Terminal"
+name = "headsup"
+version = "1.0.0"
+description = "Terminal-native AI threat memory engine for personal computers"
 requires-python = ">=3.10"
 dependencies = [
     "psutil>=5.9",
     "rich>=13.0",
+    "watchdog>=4.0",
     "openai>=1.0",
-    "python-telegram-bot>=20.0",
+    "requests>=2.28",
     "send2trash>=1.8",
 ]
 
 [project.optional-dependencies]
-memory = [
-    "supermemory>=3.0",
+# Hydra / Postgres backend for HydraDB (otherwise SQLite is used)
+postgres = [
+    "psycopg2-binary>=2.9",
 ]
 
 [project.scripts]
-clawnet = "clawnet:main"
+headsup = "headsup:main"
 
 [tool.setuptools]
-py-modules = ["clawnet"]
-packages   = ["core"]
+py-modules = ["headsup"]
+packages = ["core"]

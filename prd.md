@@ -6,11 +6,11 @@
 
 # Vision
 
-Modern antivirus software detects threats in the moment but quickly forgets them. Users receive alerts without understanding why something happened, how it relates to previous incidents, or what could happen next.
+Modern antivirus tools detect threats in the moment and then forget them. They flood users with alerts but rarely explain why something happened, how it relates to previous incidents, or what could happen next.
 
-**HeadsUp** is an AI-powered threat memory engine that continuously monitors a user's computer, remembers every suspicious event, learns normal machine behavior, ingests emerging threats from the web, and predicts attacks before they fully execute.
+**HeadsUp** is an AI-powered threat memory engine and terminal security analyst that continuously watches your computer, remembers every suspicious event, learns what is normal for your machine, ingests emerging cyber threats from the web, and predicts attacks before they fully execute.
 
-Instead of acting like another antivirus, HeadsUp behaves like a personal security analyst that never forgets.
+Instead of acting like another antivirus, HeadsUp behaves like a security analyst that never forgets.
 
 ---
 
@@ -19,18 +19,40 @@ Instead of acting like another antivirus, HeadsUp behaves like a personal securi
 Current endpoint security tools suffer from several limitations:
 
 * No long-term memory of threats.
-* No correlation between multiple suspicious events.
-* No understanding of a user's normal computer behavior.
-* No context from newly emerging malware campaigns.
+* No correlation between seemingly unrelated events.
+* No understanding of a user's normal machine behavior.
+* No awareness of newly emerging malware campaigns.
 * Poor explanations that are difficult for non-security users to understand.
+* Heavy GUI applications that hide useful information.
 
 Users need a system that can:
 
-1. Remember.
-2. Learn.
-3. Correlate.
-4. Predict.
-5. Explain.
+1. Remember
+2. Learn
+3. Correlate
+4. Predict
+5. Explain
+
+---
+
+# Product Philosophy
+
+```text
+Terminal-first.
+Memory-driven.
+AI-native.
+Explainable.
+```
+
+HeadsUp is intentionally built as a **Python Rich TUI application**.
+
+The terminal becomes a live security command center:
+
+* Real-time monitoring
+* AI explanations
+* Threat timelines
+* Interactive investigation
+* Natural language security assistant
 
 ---
 
@@ -40,57 +62,71 @@ HeadsUp continuously monitors:
 
 * Running processes
 * Network activity
+* DNS requests
 * Startup applications
 * Browser downloads
-* File system changes
-* Registry changes (Windows)
+* File changes
+* Registry changes
 * System logs
 
-All observations are stored inside **HydraDB**, creating a persistent timeline of machine behavior.
+Everything observed is stored inside **HydraDB**, creating a persistent memory of your machine's behavior.
 
-**Gemma 4 running on Cerebras** analyzes this memory to:
+**Gemma 4 running on Cerebras** reasons over this memory to:
 
 * Detect anomalies
 * Explain suspicious behavior
 * Correlate incidents
-* Predict future threat actions
-* Recommend remediation steps
+* Predict future actions
+* Recommend remediation
 
-**Anakin API** continuously ingests emerging cyber threats from the web and feeds them into the threat memory engine.
+**Anakin API** continuously ingests the latest malware campaigns and threat intelligence from the web and stores them inside the memory engine.
+
+**SkillMake.xyz Security Skills** provide modular security capabilities such as IOC extraction, incident summarization, risk scoring, and threat classification.
 
 ---
 
 # Product Architecture
 
 ```text
-PC Monitoring Agent
-        ↓
-System Events
-        ↓
-HydraDB Threat Memory
-        ↓
-Gemma 4 (Cerebras)
-        ↓
-Predictions & Explanations
-        ↓
-Desktop Dashboard
-```
+┌─────────────────────────────┐
+│     Rich Terminal UI        │
+│      (HeadsUp TUI)          │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│     Monitoring Engine       │
+│ psutil + watchdog + logs    │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│          HydraDB            │
+│      Threat Memory DB       │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│      Gemma 4 (Cerebras)     │
+│      Reasoning Engine       │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│ Predictions & Explanations  │
+└─────────────────────────────┘
 
-External Intelligence Pipeline:
 
-```text
-CISA
-Microsoft Security Blog
-BleepingComputer
-The Hacker News
-Reddit
-CVE Feeds
-        ↓
-Anakin API
-        ↓
-Threat Summarization
-        ↓
-HydraDB
+Internet Threat Sources
+        │
+        ▼
+     Anakin API
+        │
+        ▼
+  Threat Intelligence
+        │
+        ▼
+      HydraDB
 ```
 
 ---
@@ -104,10 +140,10 @@ Collects:
 * Process execution
 * Network connections
 * DNS requests
+* File modifications
 * Startup modifications
 * Registry modifications
 * Browser downloads
-* File changes
 
 Polling Interval:
 
@@ -117,15 +153,16 @@ Polling Interval:
 
 # 2. HydraDB Integration
 
-HydraDB serves as the long-term threat memory.
+HydraDB acts as the long-term threat memory.
 
 Responsibilities:
 
-* Store system events.
-* Store threat intelligence.
-* Store incident timelines.
-* Store anomaly history.
-* Store AI predictions.
+* Store system events
+* Store incident history
+* Store threat intelligence
+* Store anomaly timelines
+* Store AI predictions
+* Store threat fingerprints
 
 Example tables:
 
@@ -175,38 +212,38 @@ resolved
 
 ---
 
-# 3. Cerebras + Gemma 4 Integration
+# 3. Cerebras + Gemma 4
 
-Gemma becomes the reasoning engine.
+Gemma acts as the reasoning engine.
 
 Responsibilities:
 
 ### Explain
 
-"Why is this process suspicious?"
+Why is this suspicious?
 
 ### Correlate
 
-"Have I seen this behavior before?"
+Have I seen this behavior before?
 
 ### Predict
 
-"What is likely to happen next?"
+What is likely to happen next?
 
 ### Summarize
 
-"What happened on my computer today?"
+What happened today?
 
 ### Recommend
 
 * Delete
-* Monitor
+* Quarantine
 * Ignore
-* Block
+* Monitor
 
 ---
 
-# Prediction Examples
+# Prediction Example
 
 Input:
 
@@ -218,29 +255,27 @@ Registry modification
 Foreign network connection
 ```
 
-Gemma Output:
+Gemma:
 
 ```text
 This behavior resembles credential-stealing malware.
 
-Possible next actions:
+Likely next actions:
 
 • Persistence
-• Data exfiltration
 • Browser credential theft
+• Data exfiltration
 ```
 
 ---
 
 # 4. Anakin API Integration
 
-Anakin acts as the external threat intelligence collector.
-
-Sources:
+Anakin continuously gathers:
 
 * CISA advisories
-* Microsoft Security Blog
 * CVE feeds
+* Microsoft Security Blog
 * BleepingComputer
 * The Hacker News
 * Reddit cybersecurity communities
@@ -250,130 +285,85 @@ Pipeline:
 ```text
 Threat Sources
 ↓
-Anakin
+Anakin API
 ↓
-Gemma Summarization
+Threat Summarization
 ↓
 HydraDB
 ```
 
-Stored Information:
+---
 
-```json
-{
-  "threat_name": "",
-  "domains": [],
-  "hashes": [],
-  "behaviors": [],
-  "severity": "",
-  "source": ""
-}
-```
+# 5. SkillMake.xyz Security Skills
+
+Modular security capabilities:
+
+* IOC extraction
+* Threat classification
+* Incident explanation
+* Malware summarization
+* Risk scoring
+* Security report generation
 
 ---
 
-# Features
+# Rich TUI Experience
 
-## Threat Timeline
+## Main Screen
 
 ```text
-2:13 PM
-Downloaded suspicious file
-
-2:15 PM
-Registry modified
-
-2:18 PM
-Outbound connection detected
+┌──────────────────────────────────────┐
+│ HeadsUp Security Center              │
+├──────────────────────────────────────┤
+│ Active Connections : 36              │
+│ Suspicious Processes : 2             │
+│ Threat Score : MEDIUM                │
+│ New Threat Intel : 4                 │
+└──────────────────────────────────────┘
 ```
 
 ---
 
-## AI Security Analyst
+## Timeline View
+
+```text
+14:32 powershell.exe started
+14:33 startup registry modified
+14:35 outbound connection detected
+14:36 AI prediction generated
+```
+
+---
+
+## AI Copilot
+
+```bash
+headsup --copilot
+```
 
 Ask:
 
 * Why is my laptop slow?
-* What changed today?
 * Have I seen this IP before?
+* What changed today?
 * Is this process dangerous?
-
----
-
-## Emerging Threat Detection
-
-If the machine behavior resembles a newly published malware campaign:
-
-```text
-This activity resembles the recently reported Lumma Stealer campaign.
-Similarity: 81%
-```
-
----
-
-## Predictive Threat Engine
-
-Instead of only detecting attacks, HeadsUp predicts:
-
-* Persistence attempts
-* Data exfiltration
-* Credential theft
-* Ransomware indicators
+* Explain this malware campaign.
 
 ---
 
 # User Flow
 
-### Step 1
-
-Install HeadsUp.
-
-### Step 2
-
-Background monitoring starts.
-
-### Step 3
-
-HydraDB begins building machine memory.
-
-### Step 4
-
-Anakin continuously imports new threats.
-
-### Step 5
-
-Gemma correlates machine behavior with historical incidents and global threats.
-
-### Step 6
-
-User receives:
+1. User installs HeadsUp.
+2. Background monitoring starts.
+3. HydraDB begins building machine memory.
+4. Anakin imports new threats.
+5. Gemma correlates machine events with historical incidents and global threats.
+6. HeadsUp displays:
 
 * Alert
 * Explanation
 * Prediction
-* Suggested actions.
-
----
-
-# Dashboard
-
-## Overview
-
-* System health score
-* Active threats
-* Recent incidents
-
-## Timeline
-
-Chronological incident history.
-
-## Threat Intelligence Feed
-
-Latest malware campaigns.
-
-## AI Chat
-
-Natural language security assistant.
+* Recommended action
 
 ---
 
@@ -391,7 +381,7 @@ Removed from original ClawNet:
 
 ❌ Chaos engineering
 
-❌ HITL approvals
+❌ Human approval workflows
 
 ❌ Container security
 
@@ -399,36 +389,39 @@ Removed from original ClawNet:
 
 # Tech Stack
 
-Backend:
+Backend
 
 * Python
 * FastAPI
 
-Monitoring:
+Monitoring
 
 * psutil
 * watchdog
 
-AI:
+AI
 
 * Cerebras Inference
 * Gemma 4
 
-Memory:
+Memory
 
 * HydraDB
 
-Threat Intelligence:
+Threat Intelligence
 
 * Anakin API
 
-Frontend:
+Security Skills
 
-* React
-* Tailwind
+* SkillMake.xyz
+
+Terminal UI
+
+* Rich
 
 ---
 
 # One-Line Pitch
 
-**HeadsUp is an AI-powered threat memory engine that remembers everything your computer does, learns from emerging cyber threats across the web, and predicts attacks before they fully execute.**
+**HeadsUp is a terminal-native AI security analyst that remembers everything your computer does, learns from emerging cyber threats across the web, and predicts attacks before they fully execute.**

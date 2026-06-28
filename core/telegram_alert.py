@@ -187,7 +187,7 @@ class TelegramAlert:
         
         return self._send_message(text)
 
-    def send_clawnet_alert(
+    def send_headsup_alert(
         self,
         level: str,
         process: str,
@@ -198,12 +198,12 @@ class TelegramAlert:
         reason: str = "",
         action: str = "monitor",
     ) -> bool:
-        """Send a formatted ClawNet intelligence alert."""
+        """Send a formatted HeadsUp intelligence alert."""
         normalized_level = (level or "").strip().upper()
         icon = "CRITICAL" if normalized_level == "CRITICAL" else "SUSPICIOUS"
         proc_text = _html_escape(process or "unknown")
         pid_text = _html_escape(str(pid if pid is not None else "-"))
-        reason_text = _html_escape(reason or "ClawNet flagged this activity")
+        reason_text = _html_escape(reason or "HeadsUp flagged this activity")
         action_text = _html_escape(action or "monitor")
         geo_text = _html_escape(geo or "-")
 
@@ -215,7 +215,7 @@ class TelegramAlert:
         remote_text = _html_escape(remote_text)
 
         return self.send_alert(
-            f"<b>ClawNet Intelligence: {icon}</b>\n"
+            f"<b>HeadsUp Intelligence: {icon}</b>\n"
             f"Process: <code>{proc_text}</code>  PID: <code>{pid_text}</code>\n"
             f"Remote: <code>{remote_text}</code>  ({geo_text})\n"
             f"Reason: {reason_text}\n"
@@ -355,7 +355,7 @@ class TelegramAlert:
 _MOCK_MESSAGES = {
     "LOW": [
         "System healthy — no suspicious activity detected",
-        "All connections nominal — ClawNet watching",
+        "All connections nominal — HeadsUp watching",
         "Network scan complete — no threats found",
         "VPN active — traffic secured",
         "DNS resolution normal — no anomalies",
