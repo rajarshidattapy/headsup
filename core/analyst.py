@@ -117,10 +117,14 @@ class HeadsUpAnalyst:
     def _chat(self, system: str, user: str, max_tokens: int = 400) -> str:
         if not self.available:
             return ""
+        # Reasoning models (e.g. gpt-oss, GLM, deepseek) spend completion tokens
+        # "thinking" before any visible content, so a small budget yields an empty
+        # answer. Enforce a floor so short prompts still produce real output.
+        mt = max(int(max_tokens), 768)
         try:
             r = self._client.chat.completions.create(
                 model=self.model,
-                max_tokens=max_tokens,
+                max_tokens=mt,
                 messages=[
                     {"role": "system", "content": system},
                     {"role": "user", "content": user},
