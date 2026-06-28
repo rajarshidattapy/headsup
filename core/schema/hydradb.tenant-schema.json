@@ -1,0 +1,18 @@
+[
+  { "name": "event_type",   "type": "string",  "indexed": true,  "description": "process | network | startup | registry | download | file | dns | intel | incident | prediction" },
+  { "name": "source",       "type": "string",  "indexed": true,  "description": "Origin of the record: monitor | anakin | analyst | user" },
+  { "name": "severity",     "type": "string",  "indexed": true,  "description": "SAFE | LOW | MEDIUM | SUSPICIOUS | HIGH | CRITICAL" },
+  { "name": "risk_score",   "type": "number",  "indexed": true,  "description": "Heuristic risk 0-4" },
+  { "name": "host",         "type": "string",  "indexed": true,  "description": "Machine hostname the event was observed on" },
+  { "name": "process_name", "type": "string",  "indexed": true,  "description": "Process that generated the event, e.g. powershell.exe" },
+  { "name": "pid",          "type": "number",  "indexed": false, "description": "Process id" },
+  { "name": "remote_ip",    "type": "string",  "indexed": true,  "description": "Remote IP for network events" },
+  { "name": "remote_domain","type": "string",  "indexed": true,  "description": "Resolved remote domain / SNI host" },
+  { "name": "country",      "type": "string",  "indexed": true,  "description": "GeoIP country code of the remote endpoint" },
+  { "name": "port",         "type": "number",  "indexed": false, "description": "Remote port" },
+  { "name": "threat_name",  "type": "string",  "indexed": true,  "description": "Matched Anakin campaign, e.g. Lumma Stealer" },
+  { "name": "incident_id",  "type": "string",  "indexed": true,  "description": "Correlated incident id, e.g. INC-1719..." },
+  { "name": "confidence",   "type": "number",  "indexed": false, "description": "AI prediction/incident confidence 0-1" },
+  { "name": "action",       "type": "string",  "indexed": true,  "description": "Recommended action: ignore | monitor | quarantine | delete | block" },
+  { "name": "resolved",     "type": "boolean", "indexed": true,  "description": "Whether the incident has been resolved" }
+]

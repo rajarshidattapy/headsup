@@ -937,7 +937,7 @@ def build_chat_panel(state, inner_width=76) -> Panel:
 def _stack_subtitle(db, analyst, anakin) -> str:
     """The product-stack banner: names HydraDB · Gemma/Cerebras · Anakin with a
     compact, honest mode indicator for each."""
-    mem_mode = "Hydra/Postgres" if db.backend.startswith("hydra") else "local SQLite"
+    mem_mode = db.memory_mode
     if analyst.provider == "cerebras":
         ai_mode = analyst.model
     elif analyst.provider == "openai":

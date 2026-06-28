@@ -25,6 +25,8 @@ from __future__ import annotations
 
 import json
 import os
+import queue
+import socket
 import sqlite3
 import threading
 import time
@@ -40,12 +42,136 @@ try:  # pragma: no cover - optional dependency
 except ImportError:  # pragma: no cover
     _HAS_PG = False
 
+# Optional HTTP client for the HydraDB cloud memory backend
+try:  # pragma: no cover - optional dependency
+    import requests  # type: ignore
+    _HAS_REQUESTS = True
+except ImportError:  # pragma: no cover
+    _HAS_REQUESTS = False
+
 _DEFAULT_PATH = Path.home() / ".headsup" / "headsup.db"
 
 
 def now_iso() -> str:
     """UTC timestamp, sortable as a string."""
     return datetime.utcnow().isoformat(timespec="seconds") + "Z"
+
+
+def severity_for(score: int) -> str:
+    """Map a 0-4 risk score to a HydraDB severity label."""
+    s = int(score or 0)
+    if s >= 4:
+        return "CRITICAL"
+    return {0: "SAFE", 1: "LOW", 2: "MEDIUM", 3: "HIGH"}.get(s, "MEDIUM")
+
+
+def _clean_meta(d: dict) -> dict:
+    """Drop empty values but keep 0 / False (they are meaningful metadata)."""
+    return {k: v for k, v in d.items() if v is not None and v != "" and v != []}
+
+
+def _extract_texts(data: Any, limit: int) -> list[str]:
+    """Best-effort pull of memory snippets out of a recall response."""
+    out: list[str] = []
+
+    def walk(node):
+        if len(out) >= limit:
+            return
+        if isinstance(node, dict):
+            for key in ("memory", "text", "content", "chunk", "summary"):
+                val = node.get(key)
+                if isinstance(val, str) and val.strip():
+                    out.append(val.strip())
+                    break
+            for v in node.values():
+                walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v)
+
+    walk(data)
+    return out[:limit]
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  HydraDB cloud memory backend (usecortex — https://api.hydradb.com)
+# ════════════════════════════════════════════════════════════════════════════
+
+class _HydraCloud:
+    """Long-term semantic memory in HydraDB.
+
+    Active when ``HYDRADB_API_KEY`` + ``HYDRADB_TENANT_ID`` are set. Every event
+    HeadsUp records is also ingested here with structured ``tenant_metadata``
+    (matching ``hydradb.tenant-schema.json``), so memory survives across machines
+    and sessions and can be filtered/recalled. Writes are queued and sent on a
+    background worker so they never block the 1-second monitor loop.
+    """
+
+    INGEST_PATH = "/memories/add_memory"
+    RECALL_PATH = "/recall/recall_preferences"
+
+    def __init__(self) -> None:
+        self.api_key = os.environ.get("HYDRADB_API_KEY", "")
+        self.tenant_id = os.environ.get("HYDRADB_TENANT_ID", "")
+        self.sub_tenant_id = os.environ.get("HYDRADB_SUB_TENANT_ID", "")
+        self.base = os.environ.get("HYDRADB_API_BASE", "https://api.hydradb.com").rstrip("/")
+        self._timeout = float(os.environ.get("HYDRADB_REQUEST_TIMEOUT_MS", "8000")) / 1000.0
+        self.available = bool(self.api_key and self.tenant_id and _HAS_REQUESTS)
+        self._q: queue.Queue = queue.Queue(maxsize=500)
+        self._session = None
+        if self.available:
+            self._session = requests.Session()
+            self._session.headers.update({
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            })
+            threading.Thread(target=self._worker, daemon=True, name="hydradb-ingest").start()
+
+    # ── ingestion (non-blocking) ────────────────────────────────────────────
+    def ingest(self, text: str, metadata: dict, source_id: str = "", infer: bool = False) -> None:
+        if not self.available:
+            return
+        try:
+            self._q.put_nowait((text, metadata, source_id, infer))
+        except queue.Full:
+            pass  # best-effort; drop under pressure rather than block monitoring
+
+    def _worker(self) -> None:
+        while True:
+            text, metadata, source_id, infer = self._q.get()
+            try:
+                self._post_memory(text, metadata, source_id, infer)
+            except Exception:
+                pass
+
+    def _post_memory(self, text: str, metadata: dict, source_id: str, infer: bool) -> None:
+        item: dict = {"text": text, "infer": bool(infer),
+                      "tenant_metadata": json.dumps(_clean_meta(metadata))}
+        if source_id:
+            item["source_id"] = source_id
+        body: dict = {"memories": [item], "tenant_id": self.tenant_id, "upsert": True}
+        if self.sub_tenant_id:
+            body["sub_tenant_id"] = self.sub_tenant_id
+        self._session.post(self.base + self.INGEST_PATH, json=body, timeout=self._timeout)
+
+    # ── recall (best-effort, short timeout) ─────────────────────────────────
+    def recall(self, query: str, metadata_filters: Optional[dict] = None,
+               max_results: int = 4) -> list[str]:
+        if not self.available:
+            return []
+        body: dict = {"tenant_id": self.tenant_id, "query": query or "suspicious activity",
+                      "mode": "fast", "max_results": max_results}
+        if self.sub_tenant_id:
+            body["sub_tenant_id"] = self.sub_tenant_id
+        if metadata_filters:
+            body["metadata_filters"] = _clean_meta(metadata_filters)
+        try:
+            r = self._session.post(self.base + self.RECALL_PATH, json=body, timeout=self._timeout)
+            r.raise_for_status()
+            return _extract_texts(r.json(), max_results)
+        except Exception:
+            return []
 
 
 # ── DDL ─────────────────────────────────────────────────────────────────────
@@ -139,11 +265,28 @@ class HydraDB:
 
         self._init_schema()
 
+        # Long-term cloud memory (HydraDB) — additive; SQLite/Postgres stays the
+        # local store that powers the live dashboard and the offline fallback.
+        self._host = socket.gethostname()
+        self._cloud = _HydraCloud()
+
     # ── backend label ───────────────────────────────────────────────────────
 
     @property
     def backend(self) -> str:
         return "hydra/postgres" if self._pg else "sqlite"
+
+    @property
+    def cloud_active(self) -> bool:
+        return bool(getattr(self, "_cloud", None) and self._cloud.available)
+
+    @property
+    def memory_mode(self) -> str:
+        """Short label for the banner: reflects HydraDB cloud + local store."""
+        local = "Postgres" if self._pg else "SQLite"
+        if self.cloud_active:
+            return f"cloud + {local}"
+        return "Hydra/Postgres" if self._pg else "local SQLite"
 
     @property
     def location(self) -> str:
@@ -203,6 +346,13 @@ class HydraDB:
             "VALUES (?, ?, ?, ?, ?, ?)",
             (ts or now_iso(), pid, process_name, parent_process, path, int(risk_score)),
         )
+        parent = f" (parent {parent_process})" if parent_process else ""
+        self._cloud.ingest(
+            f"[process] {process_name} started{parent} from {path or 'unknown path'}",
+            {"event_type": "process", "source": "monitor",
+             "severity": severity_for(risk_score), "risk_score": int(risk_score),
+             "host": self._host, "process_name": process_name, "pid": pid},
+        )
 
     def store_network_event(
         self, process_name: str, remote_ip: str, remote_domain: str = "",
@@ -213,6 +363,15 @@ class HydraDB:
             "(timestamp, process_name, remote_ip, remote_domain, country, risk_score) "
             "VALUES (?, ?, ?, ?, ?, ?)",
             (ts or now_iso(), process_name, remote_ip, remote_domain, country, int(risk_score)),
+        )
+        tgt = remote_domain or remote_ip
+        self._cloud.ingest(
+            f"[network] {process_name} connected to {tgt}"
+            + (f" ({country})" if country else ""),
+            {"event_type": "network", "source": "monitor",
+             "severity": severity_for(risk_score), "risk_score": int(risk_score),
+             "host": self._host, "process_name": process_name,
+             "remote_ip": remote_ip, "remote_domain": remote_domain, "country": country},
         )
 
     def store_system_event(
@@ -226,6 +385,12 @@ class HydraDB:
             "VALUES (?, ?, ?, ?, ?, ?)",
             (ts or now_iso(), kind, source, summary,
              json.dumps(detail) if detail is not None else "", int(risk_score)),
+        )
+        self._cloud.ingest(
+            f"[{kind}] {summary}",
+            {"event_type": kind, "source": "monitor",
+             "severity": severity_for(risk_score), "risk_score": int(risk_score),
+             "host": self._host},
         )
 
     def store_intel(
@@ -245,6 +410,15 @@ class HydraDB:
                 severity, source, published_at, now_iso(),
             ),
         )
+        beh = ", ".join(behaviors or []) or "n/a"
+        doms = ", ".join(ioc_domains or []) or "n/a"
+        self._cloud.ingest(
+            f"Threat intelligence: {threat_name} ({severity}) from {source}. "
+            f"Behaviors: {beh}. IOC domains: {doms}.",
+            {"event_type": "intel", "source": "anakin", "severity": severity,
+             "host": self._host, "threat_name": threat_name},
+            source_id=f"intel:{threat_name}",
+        )
 
     def open_incident(
         self, incident_id: str, summary: str, confidence: float = 0.0,
@@ -260,9 +434,22 @@ class HydraDB:
         else:
             sql = sql.replace("INSERT INTO", "INSERT OR IGNORE INTO")
         self._exec(sql, (incident_id, now_iso(), summary, confidence, prediction, severity))
+        self._cloud.ingest(
+            f"Incident {incident_id}: {summary}. Prediction: {prediction}",
+            {"event_type": "incident", "source": "analyst", "severity": severity,
+             "host": self._host, "incident_id": incident_id,
+             "confidence": round(float(confidence), 3), "resolved": False},
+            source_id=incident_id, infer=True,
+        )
 
     def resolve_incident(self, incident_id: str) -> None:
         self._exec("UPDATE incidents SET resolved = 1 WHERE incident_id = ?", (incident_id,))
+        self._cloud.ingest(
+            f"Incident {incident_id} resolved.",
+            {"event_type": "incident", "source": "user", "host": self._host,
+             "incident_id": incident_id, "resolved": True},
+            source_id=incident_id,
+        )
 
     def store_prediction(
         self, subject: str, prediction: str, confidence: float = 0.0,
@@ -272,6 +459,12 @@ class HydraDB:
             "INSERT INTO predictions (timestamp, incident_id, subject, prediction, confidence) "
             "VALUES (?, ?, ?, ?, ?)",
             (now_iso(), incident_id, subject, prediction, confidence),
+        )
+        self._cloud.ingest(
+            f"Prediction for {subject}: {prediction}",
+            {"event_type": "prediction", "source": "analyst",
+             "host": self._host, "incident_id": incident_id,
+             "confidence": round(float(confidence), 3)},
         )
 
     # ── readers ───────────────────────────────────────────────────────────────
@@ -415,12 +608,24 @@ class HydraDB:
 
     def memory_context(self, ip: str = "", process: str = "", domain: str = "") -> str:
         c = self.correlate(ip=ip, process=process, domain=domain)
-        if not c["hits"]:
-            return ""
-        lines = [f"[MEMORY] Seen {c['hits']}x before (worst risk {c['worst']})."]
-        if c["last_seen"]:
-            lines.append(f"[MEMORY] Last seen {c['last_seen']}, first seen {c['first_seen']}.")
+        lines: list[str] = []
+        if c["hits"]:
+            lines.append(f"[MEMORY] Seen {c['hits']}x before (worst risk {c['worst']}).")
+            if c["last_seen"]:
+                lines.append(f"[MEMORY] Last seen {c['last_seen']}, first seen {c['first_seen']}.")
+        # Cross-session / cross-machine recall from HydraDB cloud memory.
+        if self.cloud_active:
+            query = " ".join(x for x in (process, domain, ip) if x)
+            for snippet in self._cloud.recall(query, max_results=3):
+                lines.append(f"[HYDRADB] {snippet[:160]}")
         return "\n".join(lines)
+
+    def recall(self, query: str, metadata_filters: Optional[dict] = None,
+               max_results: int = 5) -> list[str]:
+        """Semantic recall from HydraDB cloud memory (empty when not configured)."""
+        if not self.cloud_active:
+            return []
+        return self._cloud.recall(query, metadata_filters, max_results)
 
     def close(self) -> None:
         try:
