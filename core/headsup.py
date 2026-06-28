@@ -932,6 +932,26 @@ def build_chat_panel(state, inner_width=76) -> Panel:
     return Panel(Text.from_markup("\n".join(visible)), title=title,
                  border_style=border, padding=(0, 1))
 
+# ── branded stack line ────────────────────────────────────────────────────────
+
+def _stack_subtitle(db, analyst, anakin) -> str:
+    """The product-stack banner: names HydraDB · Gemma/Cerebras · Anakin with a
+    compact, honest mode indicator for each."""
+    mem_mode = "Hydra/Postgres" if db.backend.startswith("hydra") else "local SQLite"
+    if analyst.provider == "cerebras":
+        ai_mode = analyst.model
+    elif analyst.provider == "openai":
+        ai_mode = f"via OpenAI {analyst.model}"
+    else:
+        ai_mode = "offline"
+    intel_mode = "sample feed" if "sample" in anakin.source else "live"
+    return (
+        "[dim]Threat Memory Engine[/dim]   "
+        f"[bold bright_cyan]HydraDB[/] [dim]{mem_mode}[/]   "
+        f"[bold bright_magenta]Gemma 4 · Cerebras[/] [dim]{ai_mode}[/]   "
+        f"[bold bright_green]Anakin[/] [dim]{intel_mode}[/]"
+    )
+
 # ── Telegram bootstrap ────────────────────────────────────────────────────────
 
 def _execute_tg_action(state, action) -> None:
@@ -980,8 +1000,7 @@ def run_monitor(resolve: bool = False, auto: bool = False, once: bool = False) -
 
     console.print(Panel(Align.center(Text(BANNER, style="bold bright_cyan")),
                         border_style="bright_cyan",
-                        subtitle=f"[dim]Threat Memory Engine · memory: {db.backend} · "
-                                 f"AI: {analyst.label} · intel: {anakin.source}[/dim]",
+                        subtitle=_stack_subtitle(db, analyst, anakin),
                         padding=(0, 0)))
     if not admin:
         console.print(Panel(
@@ -1037,7 +1056,8 @@ def run_copilot() -> None:
                         border_style="bright_cyan",
                         subtitle="[dim]AI Copilot Mode  |  type 'exit' to quit[/dim]",
                         padding=(0, 0)))
-    console.print(f"[dim]Memory: {db.backend} @ {db.location}  ·  AI: {analyst.label}[/dim]")
+    console.print(_stack_subtitle(db, analyst, anakin))
+    console.print(f"[dim]HydraDB @ {db.location}[/dim]")
     console.print("[dim]Gathering a machine snapshot (3 s)…[/dim]")
     threading.Thread(target=_fetch_public_ip, daemon=True).start()
     time.sleep(3)
